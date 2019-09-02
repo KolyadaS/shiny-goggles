@@ -1,10 +1,14 @@
-html(lang="ru")
-  head
-    meta(charset="utf-8")
-    link(rel="stylesheet" href="components/main/main1.scss")
-    link(rel="stylesheet" href="primitives/buttons/colored_btn.scss")
-    title= "Toxin"
-  body
-    include /components/header/header.pug
-    include /components/main/main1.pug
-    include /components/footer/footer.pug
+extends /templates/page_template.pug
+
+block style
+  link(rel="stylesheet", href="blocks/icon/icon.scss")
+  link(rel="stylesheet", href="blocks/header/header.scss")
+  link(rel="stylesheet", href="blocks/content/content.scss")
+block title
+  title Отель Toxin
+block header
+  include blocks/header/header.pug
+block content
+  include blocks/content/content.pug
+block footer
+  include blocks/footer/footer.pug

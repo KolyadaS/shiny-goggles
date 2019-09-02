@@ -1,0 +1,16 @@
+mixin element(href, class_name, text)
+    a(href=href)
+        div(class=class_name)= text
+
+div.menu 
+    a(href="index.pug")
+        div.elem 
+            object(type="image/svg+xml" data="blocks/images/icon.svg") Your browser does not support SVG
+        div.elem
+            object(type="image/svg+xml" data="blocks/images/toxin.svg") Your browser does not support SVG
+
+    +element('index.pug', 'elem', 'О нас')
+    +element('index.pug', 'elem', 'Услуги')
+    +element('index.pug', 'elem', 'Вакансии')
+    +element('index.pug', 'elem', 'Новости')
+    +element('index.pug', 'elem', 'Соглашения')
