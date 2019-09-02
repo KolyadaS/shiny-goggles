@@ -1,10 +1,17 @@
 div.menu 
-    object(type="image/svg+xml" data="primitives/icon.svg") Your browser does not support SVG
-    object(type="image/svg+xml" data="primitives/toxin.svg") Your browser does not support SVG
-    a(href="index.pug") О нас
-    a(href="index.pug") Услуги
-    a(href="index.pug") Вакансии
-    a(href="index.pug") Новости
-    a(href="index.pug") Соглашения
-    a(href="index.pug") Кнопка Войти
-    a(href="index.pug") Кнопка Зарегистрироваться
+    object(type="image/svg+xml" data="primitives/images/icon.svg") Your browser does not support SVG
+    object(type="image/svg+xml" data="primitives/images/toxin.svg") Your browser does not support SVG
+    a(href="index.pug") 
+        div О нас
+    a(href="index.pug")
+        div Услуги
+    a(href="index.pug")
+        div Вакансии
+    a(href="index.pug")
+        div Новости
+    a(href="index.pug")
+        div Соглашения
+    a(href="index.pug") 
+        include /primitives/buttons/colored_btn.pug
+    a(href="index.pug")
+        include /primitives/buttons/colored_btn.pug

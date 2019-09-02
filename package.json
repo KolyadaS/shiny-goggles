@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/KolyadaS/shiny-goggles#readme",
   "devDependencies": {
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "sass": "^1.22.10"
   }
 }
