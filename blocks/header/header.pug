@@ -1,16 +1,21 @@
+include ../button/button.pug
+
 mixin element(href, class_name, text)
     a(href=href)
         div(class=class_name)= text
 
-div.menu 
-    a(href="index.pug")
-        div.elem 
-            object(type="image/svg+xml" data="blocks/images/icon.svg") Your browser does not support SVG
-        div.elem
-            object(type="image/svg+xml" data="blocks/images/toxin.svg") Your browser does not support SVG
+header.header 
+    div.header__logo
+        a(href="index.pug")
+            include ../icon/icon.pug
 
-    +element('index.pug', 'elem', 'О нас')
-    +element('index.pug', 'elem', 'Услуги')
-    +element('index.pug', 'elem', 'Вакансии')
-    +element('index.pug', 'elem', 'Новости')
-    +element('index.pug', 'elem', 'Соглашения')
+    div.header__menu
+        +element('index.pug', 'menu-elem', 'О нас')
+        +element('index.pug', 'menu-elem', 'Услуги')
+        +element('index.pug', 'menu-elem', 'Вакансии')
+        +element('index.pug', 'menu-elem', 'Новости')
+        +element('index.pug', 'menu-elem', 'Соглашения')
+    
+    div.header__buttons
+        +button('button1', 'index.pug','Войти')
+        +button('button1', 'index.pug','Зарегистрироваться')

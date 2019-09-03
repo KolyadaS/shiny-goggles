@@ -1,12 +1,16 @@
-.icon {
-    width: 70px;
-    vertical-align: center;
-    position: absolute;
-width: 105.69px;
-height: 40px;
-left: 140px;
-top: 15px;
+.logo {
+    width: 105.69px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .brand {
-    border: 1px solid;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 11.5px;
 }

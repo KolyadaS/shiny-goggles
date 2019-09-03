@@ -1,14 +1,12 @@
 extends /templates/page_template.pug
 
 block style
-  link(rel="stylesheet", href="blocks/icon/icon.scss")
-  link(rel="stylesheet", href="blocks/header/header.scss")
-  link(rel="stylesheet", href="blocks/content/content.scss")
+  link(rel="stylesheet", href="style.scss")
 block title
   title Отель Toxin
 block header
   include blocks/header/header.pug
-block content
-  include blocks/content/content.pug
+block main
+  include blocks/main/main.pug
 block footer
   include blocks/footer/footer.pug
