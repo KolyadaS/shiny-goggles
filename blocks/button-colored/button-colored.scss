@@ -1,0 +1,21 @@
+.button_colored {
+    color: #FFFFFF;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 9px 20px 10px 19px;
+    transform-style: preserve-3d;
+    }
+
+
+.button_colored:before {
+    position: absolute;
+    content: '';
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #BC9CFF, #8BA4F9);
+    transform: translateZ(-1px);
+}    
+    

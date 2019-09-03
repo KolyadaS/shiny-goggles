@@ -1,4 +1,5 @@
-include ../button/button.pug
+include ../button-colored/button-colored.pug
+include ../button-framed/button-framed.pug
 
 mixin element(href, class_name, text)
     a(href=href)
@@ -9,7 +10,7 @@ header.header
         a(href="index.pug")
             include ../icon/icon.pug
 
-    div.header__menu
+    div.header__menu.font_body
         +element('index.pug', 'menu-elem', 'О нас')
         +element('index.pug', 'menu-elem', 'Услуги')
         +element('index.pug', 'menu-elem', 'Вакансии')
@@ -17,5 +18,5 @@ header.header
         +element('index.pug', 'menu-elem', 'Соглашения')
     
     div.header__buttons
-        +button('button1', 'index.pug','Войти')
-        +button('button1', 'index.pug','Зарегистрироваться')
+        +button-framed('login-button font_h3', 'index.pug','Войти')
+        +button-colored('signup-button font_h3', 'index.pug','Зарегистрироваться')

@@ -1,19 +1,20 @@
-.button {
+.button_framed {
+    color: #BC9CFF;
     display: inline-block;
-
+    background: white;
     border-radius: 20px;
     padding: 9px 20px 10px 19px;
     transform-style: preserve-3d;
     }
 
 
-.button:before {
+.button_framed:before {
     position: absolute;
     content: '';
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
     border-radius: 22px;
     background: linear-gradient(180deg, #BC9CFF, #8BA4F9);
     transform: translateZ(-1px);
