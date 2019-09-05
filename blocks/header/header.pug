@@ -1,9 +1,6 @@
 include ../button-colored/button-colored.pug
 include ../button-framed/button-framed.pug
-
-mixin element(href, class_name, text)
-    a(href=href)
-        div(class=class_name)= text
+include ../new-link/new-link.pug
 
 header.header 
     div.header__logo
@@ -11,11 +8,11 @@ header.header
             include ../icon/icon.pug
 
     div.header__menu.font_body
-        +element('index.pug', 'menu-elem', 'О нас')
-        +element('index.pug', 'menu-elem', 'Услуги')
-        +element('index.pug', 'menu-elem', 'Вакансии')
-        +element('index.pug', 'menu-elem', 'Новости')
-        +element('index.pug', 'menu-elem', 'Соглашения')
+        +new-link('index.pug', 'menu-item', 'О нас')
+        +new-link('index.pug', 'menu-item', 'Услуги')
+        +new-link('index.pug', 'menu-item', 'Вакансии')
+        +new-link('index.pug', 'menu-item', 'Новости')
+        +new-link('index.pug', 'menu-item', 'Соглашения')
     
     div.header__buttons
         +button-framed('login-button font_h3', 'index.pug','Войти')

@@ -1,9 +1,20 @@
+$main-color100: #1F2041;
+$main-color75: rgba(31, 32, 65, 0.75);
+$main-color50: rgba(31, 32, 65, 0.50);
+$main-color25: rgba(31, 32, 65, 0.25);
+$main-color5: rgba(31, 32, 65, 0.05);
+
+$page-width: 1440px;
+$main-margin: 140px;
+
 @import './blocks/fonts/fonts.scss';
 @import './blocks/icon/icon.scss';
 @import './blocks/header/header.scss';
 @import './blocks/button-colored/button-colored.scss';
 @import './blocks/button-framed/button-framed.scss';
 @import './blocks/main/main.scss';
+@import './blocks/footer/footer.scss';
+
 
 .container {
     display: grid;

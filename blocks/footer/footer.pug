@@ -1,3 +1,35 @@
-footer.footer 
-    div.navigation blabla
-    div.copyright Copyright &#169; 2018 Toxin отель. Все права зачищены.
+include ../new-link/new-link.pug
+
+footer.footer
+    div.footer__navigation.navigation
+        div.navigation__column
+            div.column__logo
+            a(href="index.pug")
+                include ../icon/icon.pug
+            div.column__nav-item.nav-item.font_body Бронирование номеров в лучшем отеле 2019&nbsp;года по версии ассоциации &laquo;Отельные взгляды&raquo;
+
+        div.navigation__column
+            div.font_h3 Навигация
+            +new-link('index.pug', 'nav-item font_body', 'О нас')
+            +new-link('index.pug', 'nav-item font_body', 'Новости')
+            +new-link('index.pug', 'nav-item font_body', 'Служба поддержки')
+            +new-link('index.pug', 'nav-item font_body', 'Услуги')
+
+        div.navigation__column
+            div.font_h3 О нас
+            +new-link('index.pug', 'nav-item font_body', 'О сервисе')
+            +new-link('index.pug', 'nav-item font_body', 'Наша команда')
+            +new-link('index.pug', 'nav-item font_body', 'Вакансии')
+            +new-link('index.pug', 'nav-item font_body', 'Инвесторы')
+
+        div.navigation__column
+            div.font_h3 Служба поддержки
+            +new-link('index.pug', 'nav-item font_body', 'Соглашения')
+            +new-link('index.pug', 'nav-item font_body', 'Сообщество')
+            +new-link('index.pug', 'nav-item font_body', 'Связь с нами')
+
+        div.navigation__column
+            div.font_h3 Подписка
+            div.nav-item.font_body Получайте специальные предложения и новости сервиса
+
+div.footer__copyright.font_body Copyright &#169; 2018 Toxin отель. Все права зачищены.

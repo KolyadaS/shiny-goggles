@@ -1,6 +1,43 @@
 .content {
     grid-area: main;
-    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: $page-width;
     height: 830px;
     background-image: url(./blocks/images/main1_background.jpg);
+    background-repeat: no-repeat;
+
+    border: 1px solid;
+}
+
+.content__search-form {
+    align-self: flex-start;
+    width: 380px;
+    height: 374px;
+    margin-top: 70px;
+    margin-left: $main-margin;
+
+    border: 1px solid;
+}
+
+.content__text {
+    display: inline-block;
+    align-self: flex-end;
+    margin-bottom: 18px;
+    margin-right: $main-margin;
+
+    border: 1px solid;
+}
+
+@media (max-width: 850px) {
+    .content__search-form {
+        margin-left: 10px;
+    }
+
+    .content__text {
+        align-self: flex-end;
+        margin-left: 10px;
+    }
+
 }

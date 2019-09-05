@@ -54,7 +54,7 @@ a {
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
-    color: #1F2041;
+    color: $main-color100;
 }
 
 .font_h1 {
@@ -83,5 +83,5 @@ a {
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
+    color: $main-color75;
 }
