@@ -1,4 +1,5 @@
 include ../new-link/new-link.pug
+include ../subscription-text-field/subscription-text-field.pug
 
 footer.footer
     div.footer__navigation.navigation
@@ -31,5 +32,6 @@ footer.footer
         div.navigation__column
             div.font_h3 Подписка
             div.nav-item.font_body Получайте специальные предложения и новости сервиса
+            +subscription-text-field('', 'Email')
 
 div.footer__copyright.font_body Copyright &#169; 2018 Toxin отель. Все права зачищены.

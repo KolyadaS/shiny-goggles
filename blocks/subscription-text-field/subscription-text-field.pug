@@ -1,0 +1,8 @@
+mixin subscription-text-field(label, text)
+    div.subscription-text-field-form    
+        form 
+            label.label-text(for="subscription-text-field")= label
+            <br>
+                div.subscription-text-field-wrapper
+                    input(id="subscription-text-field" type="text" value=text)
+                    <input type="submit" value="">
