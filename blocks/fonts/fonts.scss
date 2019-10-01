@@ -50,6 +50,14 @@ a {
     color: inherit;
 }
 
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding: 0;
+}
+
 .font_common {
     font-family: Quicksand;
     font-style: normal;

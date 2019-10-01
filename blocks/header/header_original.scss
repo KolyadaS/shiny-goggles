@@ -17,53 +17,58 @@
 }
 
 .header__menu {
-    display: inline-flex;
-    min-width: 100px;
-}
-
-.menu > li {
+    display: flex;
+    
     position: relative;
-    display: inline-block;
-    white-space: nowrap;
-    margin-left: 20px;
-}
 
-.menu a {
-    display: block;
-}
-
-.menu a:hover {
-    background-color: $main-color5;
-}
-
-.menu .submenu {
-    position: absolute;
-    display: none;
-}
-
-.menu > li:hover .submenu {
-    display: block;
-}
-
-.submenu {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-
-.down:after {
-    content: url(./blocks/images/expand_more.svg);
-    padding-top: 8px;   
+    margin-top: 26px;
+    margin-bottom: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
 }
 
 .header__buttons {
     display: flex;
+    margin-top: 18px;
+    margin-bottom: 18px;
     align-items: center;
     margin-left: auto;
     margin-right: 140px;
 }
 
-.signup-button{
-    margin-left: 20px;
+.menu-item {
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    vertical-align: middle;    
+}
+
+.down:after {
+    content: url(./blocks/images/expand_more.svg);
+    padding-top: 8px;
+    border: 1px solid red;    
+}
+
+.submenu {
+    border: 2px solid red;
+    z-index: 10;
+}
+
+li:hover .submenu {
+    visibility: visible;
+}
+
+.submenu li a {
+    color: red;
+}
+
+.login-button,
+.signup-button {
+    
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 @media (max-width: 1000px) {

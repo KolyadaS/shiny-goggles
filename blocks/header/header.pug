@@ -8,12 +8,29 @@ header.header
             include ../icon/icon.pug
 
     div.header__menu.font_body
-        +new-link('index.pug', 'menu-item', 'О нас')
-        +new-link('index.pug', 'menu-item', 'Услуги')
-        +new-link('index.pug', 'menu-item', 'Вакансии')
-        +new-link('index.pug', 'menu-item', 'Новости')
-        +new-link('index.pug', 'menu-item', 'Соглашения')
+        ul.menu
+            li
+                +new-link('index.pug', 'menu-item', 'О нас')
+            li
+                +new-link('index.pug', 'menu-item down', 'Услуги')
+                ul.submenu
+                    li
+                        +new-link('index.pug', 'menu-item', 'Услуга1')
+                    li 
+                        +new-link('index.pug', 'menu-item', 'Услуга2')
+            li
+                +new-link('index.pug', 'menu-item', 'Вакансии')
+            li
+                +new-link('index.pug', 'menu-item', 'Новости')
+            li
+                +new-link('index.pug', 'menu-item down', 'Соглашения')
+                ul.submenu
+                    li
+                        +new-link('index.pug', 'menu-item', 'Соглашение1')
+                    li 
+                        +new-link('index.pug', 'menu-item', 'Соглашение2')
+            li
+                div.header__buttons
+                    +button-framed('login-button font_h3', 'index.pug','Войти')
+                    +button-colored('signup-button font_h3', 'index.pug','Зарегистрироваться')
     
-    div.header__buttons
-        +button-framed('login-button font_h3', 'index.pug','Войти')
-        +button-colored('signup-button font_h3', 'index.pug','Зарегистрироваться')
