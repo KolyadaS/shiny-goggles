@@ -1,0 +1,34 @@
+div.guests 
+    label.font_h3 Гости
+    div.guests__menu
+        div.menu
+            div.menu__wrapper
+                div.menu__item.font_body Сколько гостей
+                div.expand-more-icon
+            div.guests_submenu.font_h3
+                div.adult
+                    div.adult__wrapper
+                        div.guest-content Взрослые
+                        div.buttons-wrapper
+                            div.round_button_minus
+                            div.guest-content 0
+                            div.round_button_plus
+                div.children 
+                    div.children__wrapper
+                        div.guest-content Дети
+                        div.buttons-wrapper
+                            div.round_button_minus
+                            div.guest-content 0
+                            div.round_button_plus
+                div.newborn 
+                    div.newborn__wrapper
+                        div.guest-content Младенцы
+                        div.buttons-wrapper
+                            div.round_button_minus
+                            div.guest-content 0
+                            div.round_button_plus
+                div.clear-apply-buttons 
+                    div 
+                        +new-link('index.pug', 'menu-item font_h3 dropdown_button_clear', 'Очистить')
+                    div 
+                        +new-link('index.pug', 'menu-item font_h3 dropdown_button_apply', 'Применить')
