@@ -1,9 +1,11 @@
+include ../new-link/new-link.pug
+
 div.guests 
     label.font_h3 Гости
-    div.guests__menu
-        div.menu
-            div.menu__wrapper
-                div.menu__item.font_body Сколько гостей
+    div.guests__dropdown-menu
+        div.dropdown-menu
+            div.dropdown-menu__wrapper
+                div.dropdown-menu__item.font_body Сколько гостей
                 div.expand-more-icon
             div.guests_submenu.font_h3
                 div.adult
@@ -29,6 +31,6 @@ div.guests
                             div.round_button_plus
                 div.clear-apply-buttons 
                     div 
-                        +new-link('index.pug', 'menu-item font_h3 dropdown_button_clear', 'Очистить')
+                        +new-link('#', 'dropdown-menu-item font_h3 dropdown_button_clear', 'Очистить')
                     div 
-                        +new-link('index.pug', 'menu-item font_h3 dropdown_button_apply', 'Применить')
+                        +new-link('#', 'dropdown-menu-item font_h3 dropdown_button_apply', 'Применить')

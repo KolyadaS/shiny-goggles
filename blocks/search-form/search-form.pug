@@ -1,9 +1,12 @@
-div.content__search-form
-    div.search-form__title.font_h1 Найдем номера под ваши пожелания
-    div.font_h3 Прибытие
-        <input type="text" id="blabla" class="datepicker-here" data-range="true" data-multiplee-dates-separator=" - " />
-    div.font_h3 Выезд 
-        <input type="text" id="blabla" class="datepicker-here" />
-    div Гости тут
-        include ../dropdown/dropdown.pug
-    +button-colored('search_room font_h3', 'index.pug','Подобрать номер')
+include ../button-colored/button-colored.pug
+
+mixin search-form
+    div.content__search-form
+        div.search-form__title.font_h1 Найдем номера под ваши пожелания
+        div.search-form__check-in.font_h3 Прибытие
+            <input type="text" id="blabla" class="datepicker-here" data-range="true" data-multiplee-dates-separator=" - " />
+        div.search-form__check-out.font_h3 Выезд 
+            <input type="text" id="blabla" class="datepicker-here" />
+        div Гости тут
+            include ../dropdown/dropdown.pug
+        +button-colored('search_room font_h3', '#','Подобрать номер')

@@ -1,28 +1,9 @@
 {
-  "name": "shiny-goggles",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KolyadaS/shiny-goggles.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KolyadaS/shiny-goggles/issues"
-  },
-  "homepage": "https://github.com/KolyadaS/shiny-goggles#readme",
   "devDependencies": {
     "pug": "^2.0.4",
-    "sass": "^1.22.10"
+    "sass": "^1.23.0"
   },
   "dependencies": {
-    "air-datepicker": "^2.2.3",
-    "jquery": "^3.4.1"
+    "air-datepicker": "^2.2.3"
   }
 }

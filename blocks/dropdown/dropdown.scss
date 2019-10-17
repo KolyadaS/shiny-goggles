@@ -2,7 +2,7 @@
     width: 320px;
 }
 
-.guests__menu {
+.guests__dropdown-menu {
     margin-top: 5px;
 }
 
@@ -12,14 +12,14 @@
     background: url(./blocks/images/expand_more.svg) no-repeat center center;
 }
 
-.menu__wrapper {
+.dropdown-menu__wrapper {
     display: inline-flex;
     flex-wrap: wrap;
     width: 320px;
     border: 1px solid $main-color25;
 }
 
-.menu__item {
+.dropdown-menu__item {
     width: 261px;
     height: 44px;
     padding-left: 15px;
@@ -89,20 +89,20 @@
     padding: 19px 7px 13px 15px;
 }
 
-.menu > div {
+.dropdown-menu > div {
     position: relative;
 }
 
-.menu:hover {
+.dropdown-menu:hover {
     background-color: $main-color5;
 }
 
-.menu .guests_submenu {
+.dropdown-menu .guests_submenu {
     position: absolute;
     display: none;
 }
 
-.menu:hover .guests_submenu {
+.dropdown-menu:hover .guests_submenu {
     display: block;
     z-index: 10;
 }

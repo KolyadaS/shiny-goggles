@@ -32,7 +32,11 @@
     display: block;
 }
 
-.menu a:hover {
+.menu li:hover {
+    background-color: $main-color5;
+}
+
+.submenu li > a:hover {
     background-color: $main-color5;
 }
 

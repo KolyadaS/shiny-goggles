@@ -1,0 +1,7 @@
+mixin text-field(leftlabel, rightlabel, text)
+    div.text-field-form     
+        div.text-field-form__label-wrapper
+            div.text-field-label= leftlabel
+            div.text-field-label.text-field-label2= rightlabel
+        div.text-field-wrapper
+            input(id="text-field" type="text" value=text)

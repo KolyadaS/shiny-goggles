@@ -1,0 +1,27 @@
+extends ../templates/page_template.pug
+
+include ../blocks/icon/icon.pug
+include ../blocks/search-form/search-form.pug
+
+block style 
+    link(rel="stylesheet", href="../style.scss")
+    link(href="../node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css")
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+
+block title
+  title Form Elements
+
+block header
+    div.header__logo
+        a(href="../index.pug")
+            +logo('../blocks/images/icon.svg', '../blocks/images/toxin.svg')
+
+
+block main
+
+    div
+        +search-form
+
+block footer
+    div bla
