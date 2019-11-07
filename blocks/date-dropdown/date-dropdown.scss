@@ -1,0 +1,35 @@
+.date-dropdown {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 64px;
+    background-color: white;
+}
+
+.date-dropdown__date1 {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.date-dropdown__date2 {
+    width: 150px;
+}
+
+.date-dropdown__date1 > input,
+.date-dropdown__date2 > input {
+    @extend .font_body;
+    border-radius: 4px; 
+    border: 1px solid $main-color25;
+    color: $main-color75;
+    height: 44px;
+    width: 150px;
+    padding-left: 15px;
+    background: url(./blocks/images/expand_more.svg) no-repeat 120px center;
+    margin-top: 5px;
+    
+}
+
+.date-dropdown__date1 > input:hover,
+.date-dropdown__date2 > input:hover {
+    border: 1px solid $main-color50;
+}

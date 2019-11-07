@@ -1,0 +1,10 @@
+include ../new-link/new-link.pug
+
+mixin date-dropdown(label1, label2)
+
+    div.date-dropdown
+        div.date-dropdown__date1.font_h3= label1
+            <input type="text" value="ДД.ММ.ГГГГ" class="datepicker-here" data-range="true" data-multiplee-dates-separator=" - " />
+
+        div.date-dropdown__date2.font_h3= label2 
+            <input type="text" value="ДД.ММ.ГГГГ" class="datepicker-here" />

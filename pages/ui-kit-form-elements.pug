@@ -4,6 +4,7 @@ include ../blocks/icon/icon.pug
 include ../blocks/text-field/text-field.pug
 include ../blocks/dropdown/dropdown.pug
 include ../blocks/masked-text-field/masked-text-field.pug
+include ../blocks/date-dropdown/date-dropdown.pug
 
 include ../blocks/subscription-text-field/subscription-text-field.pug
 include ../blocks/search-form/search-form.pug
@@ -36,6 +37,8 @@ block main
         div.form-element
             +subscription-text-field('Subscription text field', 'Email')
 
+        div.form-element 
+            +date-dropdown('Date dropdown', 'Date dropdown')
+
 block footer
     div bla 
-        <input id="date" value="1231" type="text" tabindex="1" />
