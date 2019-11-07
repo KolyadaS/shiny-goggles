@@ -16,10 +16,11 @@
     margin-top: 5px;
 }
 
-input[type="text"] {
+.subscription-text-field-wrapper > input[type="text"] {
     @extend .font_body;
     color: $main-color25;
     border-radius: 4px; 
+    padding-left: 15px;
     border: none;
     height: 44px;
     width: 219px;

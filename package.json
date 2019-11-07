@@ -4,6 +4,7 @@
     "sass": "^1.23.0"
   },
   "dependencies": {
-    "air-datepicker": "^2.2.3"
+    "air-datepicker": "^2.2.3",
+    "jquery.maskedinput": "^1.4.1"
   }
 }

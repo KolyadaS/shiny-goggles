@@ -1,0 +1,17 @@
+mixin masked-text-field(leftlabel, rightlabel, text)
+    link(href="../node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css")
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="../node_modules/jquery.maskedinput/lib/jquery-1.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../node_modules/jquery.maskedinput/src/jquery.maskedinput.js"></script>
+    <script>var $jQuery_1_8_3 = jQuery.noConflict(true);</script>
+    <script type="text/javascript">$jQuery_1_8_3(function() { $(".date") .datepicker({ nextText: "", prevText: "", changeMonth: true, changeYear: true }) .mask("99/99/9999"); }); </script>
+        
+    div.masked-text-field-form     
+        div.masked-text-field-form__label-wrapper
+            div.masked-text-field-label= leftlabel
+            div.masked-text-field-label.masked-text-field-label2= rightlabel
+        div.masked-text-field-wrapper
+            <input id="date-picker" value="ДД.ММ.ГГГГ" type="text" tabindex="1" class="date" />

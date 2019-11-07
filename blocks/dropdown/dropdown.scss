@@ -20,6 +20,7 @@
 }
 
 .dropdown-menu__item {
+    @extend .font_body;
     width: 261px;
     height: 44px;
     padding-left: 15px;

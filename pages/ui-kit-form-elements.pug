@@ -2,15 +2,14 @@ extends ../templates/page_template.pug
 
 include ../blocks/icon/icon.pug
 include ../blocks/text-field/text-field.pug
+include ../blocks/dropdown/dropdown.pug
+include ../blocks/masked-text-field/masked-text-field.pug
 
 include ../blocks/subscription-text-field/subscription-text-field.pug
 include ../blocks/search-form/search-form.pug
 
 block style 
     link(rel="stylesheet", href="../style.scss")
-    link(href="../node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css")
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
 
 block title
   title Form Elements
@@ -29,7 +28,14 @@ block main
             +text-field('Text field', 'Hover/focus', 'This is pretty awesome')
 
         div.form-element
+            +dropdown    
+
+        div.form-element
+            +masked-text-field('Masked text field', 'default', 'ДД.ММ.ГГГГ')
+
+        div.form-element
             +subscription-text-field('Subscription text field', 'Email')
 
 block footer
-    div bla
+    div bla 
+        <input id="date" value="1231" type="text" tabindex="1" />

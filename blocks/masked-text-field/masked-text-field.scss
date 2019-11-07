@@ -1,27 +1,27 @@
-.text-field-form {
+.masked-text-field-form {
     width: 320px;
     min-height: 64px;
 }
 
-.text-field-form__label-wrapper {
+.masked-text-field-form__label-wrapper {
     display: flex;
     justify-content: space-between;
 }
 
-.text-field-label {
+.masked-text-field-label {
     @extend .font_h3;
  }
 
- .text-field-label2 {
+ .masked-text-field-label2 {
     color: $main-color50;
     font-weight: normal;
  }
 
-.text-field-wrapper {
+.masked-text-field-wrapper {
     display: inline-flex;
 }
 
-.text-field-wrapper > input {
+.masked-text-field-wrapper > input {
     @extend .font_body;
     color: $main-color25;
     border-radius: 4px; 
@@ -32,8 +32,8 @@
     margin-top: 5px;
 }
 
-.text-field-wrapper > input:hover,
-.text-field-wrapper > input:active {
+.masked-text-field-wrapper > input:hover,
+.masked-text-field-wrapper > input:active {
     border: 1px solid $main-color50;
     color: $main-color75;
 }
