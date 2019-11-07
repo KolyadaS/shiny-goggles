@@ -1,0 +1,22 @@
+.filter-date-dropdown {
+    width: 266px;
+    height: 64px;
+    background-color: white;
+}
+
+.filter-date-dropdown__date-range > input {
+    @extend .font_body;
+    border-radius: 4px; 
+    border: 1px solid $main-color25;
+    color: $main-color75;
+    text-transform: lowercase;
+    height: 44px;
+    width: 266px;
+    padding-left: 15px;
+    background: url(./blocks/images/expand_more.svg) no-repeat 235px center;
+    margin-top: 5px;   
+}
+
+.filter-date-dropdown__date-range > input:hover {
+    border: 1px solid $main-color50;
+}

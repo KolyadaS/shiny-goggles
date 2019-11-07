@@ -1,0 +1,7 @@
+include ../new-link/new-link.pug
+
+mixin filter-date-dropdown(label)
+
+    div.filter-date-dropdown
+        div.filter-date-dropdown__date-range.font_h3= label
+            <input class="datepicker-here" type="text" data-date-format="dd M" data-multiple-dates-separator=" - " data-range="true" value="19 авг - 23 авг" />
