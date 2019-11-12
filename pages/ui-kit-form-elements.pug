@@ -6,7 +6,7 @@ include ../blocks/dropdown/dropdown.pug
 include ../blocks/masked-text-field/masked-text-field.pug
 include ../blocks/date-dropdown/date-dropdown.pug
 include ../blocks/filter-date-dropdown/filter-date-dropdown.pug
-
+include ../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../blocks/subscription-text-field/subscription-text-field.pug
 include ../blocks/search-form/search-form.pug
 
@@ -30,7 +30,7 @@ block main
             +text-field('Text field', 'Hover/focus', 'This is pretty awesome')
 
         div.form-element
-            +dropdown    
+            +dropdown('Dropdown', ' ', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')    
 
         div.form-element
             +masked-text-field('Masked text field', 'default', 'ДД.ММ.ГГГГ')
@@ -43,6 +43,12 @@ block main
 
         div.form-element
             +subscription-text-field('Subscription text field', 'Email')
+
+        div.form-element
+            +dropdown('Dropdown', 'Default', 'Сколько гостей1', 'Взрослые1', 'Дети1', 'Младенцы1')
+
+        div.form-element 
+            +expandable-checkbox-list('Dropdown', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь')
 
 block footer
     div bla 

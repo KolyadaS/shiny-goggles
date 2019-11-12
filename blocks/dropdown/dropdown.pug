@@ -1,35 +1,37 @@
 include ../new-link/new-link.pug
 
-mixin dropdown
-    div.guests 
-        label.font_h3 Гости
-        div.guests__dropdown-menu
+mixin dropdown(leftlabel, rightlabel, text, item1, item2, item3)
+    div.dropdown 
+        div.dropdown__label-wrapper
+            div.dropdown-label.font_h3= leftlabel
+            div.dropdown-label.dropdown-label2= rightlabel
+        div.dropdown__dropdown-menu
             div.dropdown-menu
                 div.dropdown-menu__wrapper
-                    div.dropdown-menu__item Сколько гостей
-                    div.expand-more-icon
-                div.guests_submenu.font_h3
-                    div.adult
-                        div.adult__wrapper
-                            div.guest-content Взрослые
+                    div.dropdown-menu__item= text
+                    
+                div.dropdown_submenu.font_h3
+                    div.dropdown__item
+                        div.item__wrapper
+                            div.guest-content= item1
                             div.buttons-wrapper
-                                div.round_button_minus
+                                button.round_button_minus
                                 div.guest-content 0
-                                div.round_button_plus
-                    div.children 
-                        div.children__wrapper
-                            div.guest-content Дети
+                                button.round_button_plus
+                    div.dropdown__item 
+                        div.item__wrapper
+                            div.guest-content= item2
                             div.buttons-wrapper
-                                div.round_button_minus
+                                button.round_button_minus
                                 div.guest-content 0
-                                div.round_button_plus
-                    div.newborn 
-                        div.newborn__wrapper
-                            div.guest-content Младенцы
+                                button.round_button_plus
+                    div.dropdown__item
+                        div.item__wrapper
+                            div.guest-content= item3
                             div.buttons-wrapper
-                                div.round_button_minus
+                                button.round_button_minus
                                 div.guest-content 0
-                                div.round_button_plus
+                                button.round_button_plus
                     div.clear-apply-buttons 
                         div 
                             +new-link('#', 'dropdown-menu-item font_h3 dropdown_button_clear', 'Очистить')

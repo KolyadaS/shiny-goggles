@@ -1,8 +1,19 @@
-.guests {
+.dropdown {
     width: 320px;
 }
 
-.guests__dropdown-menu {
+.dropdown__label-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-label2 {
+    @extend .font_h3;
+    color: $main-color50;
+    font-weight: normal;
+}
+
+.dropdown__dropdown-menu {
     margin-top: 5px;
 }
 
@@ -16,20 +27,27 @@
     display: inline-flex;
     flex-wrap: wrap;
     width: 320px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     border: 1px solid $main-color25;
 }
 
 .dropdown-menu__item {
     @extend .font_body;
-    width: 261px;
+    display: flex;
+    align-items: center;
+    width: 320px;
     height: 44px;
     padding-left: 15px;
+    background: url(./blocks/images/expand_more.svg) no-repeat 295px center;
 }
 
-.guests_submenu {
+.dropdown_submenu {
     display: none;
     width: 320px;
     background-color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
     border: 1px solid $main-color25;
     border-top: 1px solid white;
 }
@@ -37,28 +55,26 @@
 .round_button_minus {
     width: 30px;
     height: 30px;
-    padding-right: 16px;
+    margin-right: 10px;
     background: url(./blocks/images/round_button_minus.svg) no-repeat center center;
+    border: none;
 }
 
 .round_button_plus {
     width: 30px;
     height: 30px;
-    padding-left: 16px;
+    margin-left: 10px;
     background: url(./blocks/images/round_button_plus.svg) no-repeat center center;
+    border: none;
 }
 
-.adult,
-.children,
-.newborn {
+.dropdown__item {
     display: flex;
     align-items: center;
     height: 44px;
 }
 
-.adult__wrapper,
-.children__wrapper,
-.newborn__wrapper {
+.item__wrapper {
     width: 320px;
     padding-left: 15px;
     padding-right: 7px;
@@ -94,16 +110,12 @@
     position: relative;
 }
 
-.dropdown-menu:hover {
-    background-color: $main-color5;
-}
-
-.dropdown-menu .guests_submenu {
+.dropdown-menu .dropdown_submenu {
     position: absolute;
     display: none;
 }
 
-.dropdown-menu:hover .guests_submenu {
+.dropdown-menu:hover .dropdown_submenu {
     display: block;
     z-index: 10;
 }
