@@ -9,6 +9,7 @@ include ../blocks/filter-date-dropdown/filter-date-dropdown.pug
 include ../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../blocks/subscription-text-field/subscription-text-field.pug
 include ../blocks/search-form/search-form.pug
+include ../blocks/icon-text-list/icon-text-list.pug
 
 block style 
     link(rel="stylesheet", href="../style.scss")
@@ -50,5 +51,8 @@ block main
         div.form-element 
             +expandable-checkbox-list('Dropdown', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь')
 
+        div.form-element 
+            +icon-text-list('../blocks/images/insert_emoticon.svg', 'Комфорт', 'Шумопоглощающие стены')
+            +icon-text-list('../blocks/images/location_city.svg', 'Удобство', 'Окно в каждой из спален')
 block footer
     div bla 

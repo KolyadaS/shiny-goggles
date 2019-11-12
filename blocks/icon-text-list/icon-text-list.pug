@@ -1,0 +1,7 @@
+mixin icon-text-list(icon_url, title, text)
+    div.icon-text-list
+        div.icon-text-list__icon
+            img(src=icon_url, alt=title)
+        div.icon-text-list__wrapper
+            div.icon-text-list__title.font_body= title
+            div.icon-text-list__text.font_body= text

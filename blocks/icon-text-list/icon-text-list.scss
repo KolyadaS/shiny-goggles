@@ -1,0 +1,30 @@
+.icon-text-list {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 291px;
+    min-height: 48px;
+    border-bottom: 1px solid $main-color25;
+    margin-bottom: 20px;
+}
+
+.icon-text-list__wrapper {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.icon-text-list__icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.icon-text-list__title {
+    height: 24px;
+    font-weight: bold;
+}
+
+.icon-text-list__text {
+    min-height: 24px;
+}
