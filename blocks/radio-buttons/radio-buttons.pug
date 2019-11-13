@@ -1,0 +1,10 @@
+mixin radio-buttons(label, ...items)
+    div.radio-buttons 
+        div.radio-buttons__title.font_h3= label
+        div.radio-buttons__items.font_body
+            -var i=1
+            each item in items
+
+                    input(type="radio" class="radio-button" name=label id="radio-button"+i)
+                    label(class="radio-button" for="radio-button"+i)= item
+                    -i=i+1

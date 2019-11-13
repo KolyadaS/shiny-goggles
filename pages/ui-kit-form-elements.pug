@@ -11,6 +11,7 @@ include ../blocks/subscription-text-field/subscription-text-field.pug
 include ../blocks/search-form/search-form.pug
 include ../blocks/icon-text-list/icon-text-list.pug
 include ../blocks/checkbox-buttons/checkbox-buttons.pug
+include ../blocks/radio-buttons/radio-buttons.pug
 
 block style 
     link(rel="stylesheet", href="../style.scss")
@@ -59,5 +60,7 @@ block main
         div.form-element 
             +checkbox-buttons('Checkbox buttons', 'Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
 
+        div.form-element 
+            +radio-buttons('Radio buttons', 'Мужчина', 'Женщина')
 block footer
     div bla 
