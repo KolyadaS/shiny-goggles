@@ -1,0 +1,71 @@
+.toggle {
+    width: max-content;
+}
+
+.toggle__title {
+    margin-bottom: 16px;
+}
+
+.toggle__item {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+
+  .toggle__slider__label {
+    display: block;
+    width: max-content;
+    max-width: $page-width - 2 * $main-margin;
+    padding-left: 50px;
+  }
+  
+  .toggle__item input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .toggle__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+    border: 1px solid $main-color25;
+    transition: .4s;
+  }
+  
+  .toggle__slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 3px;
+    background: linear-gradient(180deg, $color1 0%, #8BA4F9 100%);
+    transition: .4s;
+  }
+  
+  input:checked + .toggle__slider {
+    background-color: #FFFFFF;
+    border: 1px solid $color1;
+  }
+  
+  input:not(:checked) + .toggle__slider:before {
+    background: $main-color25;
+  }
+  
+  input:checked + .toggle__slider:before {
+    transform: translateX(20px);
+  }
+  
+  .toggle__slider.toggle__slider_round {
+    border-radius: 10px;
+  }
+  
+  .toggle__slider.toggle__slider_round:before {
+    border-radius: 10px;
+  } 
+

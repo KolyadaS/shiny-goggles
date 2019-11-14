@@ -12,6 +12,7 @@ include ../blocks/search-form/search-form.pug
 include ../blocks/icon-text-list/icon-text-list.pug
 include ../blocks/checkbox-buttons/checkbox-buttons.pug
 include ../blocks/radio-buttons/radio-buttons.pug
+include ../blocks/toggle/toggle.pug
 
 block style 
     link(rel="stylesheet", href="../style.scss")
@@ -62,5 +63,12 @@ block main
 
         div.form-element 
             +radio-buttons('Radio buttons', 'Мужчина', 'Женщина')
+
+        div.form-element 
+            +toggle('Toggle', 'Получать спецпредложения')
+
+        div.form-element 
+            +toggle('', 'Получать спецпредложения')
+
 block footer
     div bla 

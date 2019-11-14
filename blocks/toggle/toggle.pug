@@ -1,0 +1,8 @@
+mixin toggle(label, item)
+    div.toggle 
+        div.toggle__title.font_h3= label
+        div.toggle__item.font_body
+            label.toggle__slider__label= item
+                input(type="checkbox")
+                span.toggle__slider.toggle__slider_round
+
