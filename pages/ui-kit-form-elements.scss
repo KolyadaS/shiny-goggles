@@ -7,3 +7,10 @@
 .form-element {
     margin-bottom: 20px;
 }
+
+.form-element__like-button {
+    display: flex;
+    flex-direction: row;
+    padding-left: 100px;
+    border: 1px solid;
+}

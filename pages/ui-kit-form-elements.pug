@@ -13,6 +13,7 @@ include ../blocks/icon-text-list/icon-text-list.pug
 include ../blocks/checkbox-buttons/checkbox-buttons.pug
 include ../blocks/radio-buttons/radio-buttons.pug
 include ../blocks/toggle/toggle.pug
+include ../blocks/like-button/like-button.pug
 
 block style 
     link(rel="stylesheet", href="../style.scss")
@@ -69,6 +70,10 @@ block main
 
         div.form-element 
             +toggle('', 'Получать спецпредложения')
+
+        div.form-element.form-element__like-button
+            +like-button('Лайки кнопка 1')
+            +like-button('Лайки кнопка 2')
 
 block footer
     div bla 

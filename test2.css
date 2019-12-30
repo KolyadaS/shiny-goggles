@@ -1,0 +1,39 @@
+.like-button {
+  width: 40px;
+  height: 20px;
+  counter-reset: likes;
+}
+
+.like-button__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.like-button__icon:before {
+  display: inline-block;
+  content: counter(likes);
+  width: 20px;
+  height: 20px;
+  padding-left: 20px;
+}
+
+.like-button__icon {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.like-button__checkbox:not(:checked) + .like-button__icon {
+  background: url(./blocks/images/favorite_border.svg) 20% 50% no-repeat;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.like-button__checkbox:checked + .like-button__icon {
+  background: url(./blocks/images/favorite.svg) 20% 50% no-repeat;
+  counter-increment: likes;
+  border: 1px solid #BC9CFF;
+}
+
+
+
