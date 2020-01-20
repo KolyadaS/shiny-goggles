@@ -14,6 +14,7 @@ include ../blocks/checkbox-buttons/checkbox-buttons.pug
 include ../blocks/radio-buttons/radio-buttons.pug
 include ../blocks/toggle/toggle.pug
 include ../blocks/like-button/like-button.pug
+include ../blocks/rate-button/rate-button.pug
 
 block style 
     link(rel="stylesheet", href="../style.scss")
@@ -71,9 +72,28 @@ block main
         div.form-element 
             +toggle('', 'Получать спецпредложения')
 
-        div.form-element.form-element__like-button
-            +like-button('Лайки кнопка 1')
-            +like-button('Лайки кнопка 2')
+        div.form-element
+            div.form-element__label.font_h3 Like buttons
+            div.form-element__like-button
+                +like-button('Лайки кнопка 1')
+                +like-button('Лайки кнопка 2')
+
+        div.form-element 
+            div.form-element__label.font_h3 Rate buttons
+            div.form-element__rate-button
+                +rate-button('rating_demo1')
+                +rate-button('rating_demo2')
+
+
+        <div class="star-rating">
+            <fieldset>
+                <input type="radio" id="stars5" name="rating" value="50" /><label for="stars5" title="Outstanding">5</label>
+                <input type="radio" id="stars4" name="rating" value="40" /><label for="stars4" title="Very Good">4</label>
+                <input type="radio" id="stars3" name="rating" value="30" /><label for="stars3" title="Good">3</label>
+                <input type="radio" id="stars2" name="rating" value="20" /><label for="stars2" title="Poor">2</label>
+                <input type="radio" id="stars1" name="rating" value="10" /><label for="stars1" title="Very Poor">1</label>
+            </fieldset>
+        </div>
 
 block footer
     div bla 

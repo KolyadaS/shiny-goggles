@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "pug": "^2.0.4",
-    "sass": "^1.23.0"
+    "sass": "^1.24.4"
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",

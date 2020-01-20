@@ -1,0 +1,39 @@
+.rate-button > .rate-button__fieldset {
+    position: relative;
+    left: -28px;
+    width: 120px;
+    height: 24px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    border: none;
+    padding: 3px 0 0 0;
+}
+
+.rate-button > .rate-button__fieldset > label {
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+}
+
+.rate-button > .rate-button__fieldset > input:not(:checked) + label:before {
+    position: relative;
+    content: url(./blocks/images/star_border.svg);
+    border-color: transparent; 
+}
+
+.rate-button > .rate-button__fieldset > input:checked ~ label::before {
+    position: relative;
+    border-color: transparent;
+    content: url(./blocks/images/star.svg);
+}
+
+.rate-button > .rate-button__fieldset > input:not(:checked) + label:after {
+    position: relative;
+    content: "";
+}
+
+.rate-button > .rate-button__fieldset > input:checked ~ label:after {
+    position: relative;
+    content: "";
+}
