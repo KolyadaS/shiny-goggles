@@ -1,10 +1,8 @@
-mixin checkbox-buttons(label, ...items)
+mixin checkbox-buttons(checkbox_btn_name, label, ...items)
     div.checkbox-buttons 
         div.checkbox-buttons__title.font_h3= label
         div.checkbox-buttons__items.font_body
-            -var i=1
-            each item in items
-                input(type="checkbox" class="checkbox-button" id="checkbox-button"+i)
-                label(for="checkbox-button"+i)= item
-                -i=i+1
+            -for(var i=0; i<items.length; i++)
+                input(type="checkbox" class="checkbox-button" name=checkbox_btn_name id=checkbox_btn_name+"_id_"+i)
+                label(for=checkbox_btn_name+"_id_"+i)= items[i]
                 <br>

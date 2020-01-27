@@ -15,6 +15,7 @@ include ../blocks/radio-buttons/radio-buttons.pug
 include ../blocks/toggle/toggle.pug
 include ../blocks/like-button/like-button.pug
 include ../blocks/rate-button/rate-button.pug
+include ../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
 
 block style 
     link(rel="stylesheet", href="../style.scss")
@@ -61,7 +62,7 @@ block main
             +icon-text-list('../blocks/images/location_city.svg', 'Удобство', 'Окно в каждой из спален')
 
         div.form-element 
-            +checkbox-buttons('Checkbox buttons', 'Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
+            +checkbox-buttons('checkbox_button_1', 'Checkbox buttons', 'Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
 
         div.form-element 
             +radio-buttons('Radio buttons', 'Мужчина', 'Женщина')
@@ -84,16 +85,16 @@ block main
                 +rate-button('rating_demo1')
                 +rate-button('rating_demo2')
 
+        div.form-element 
+            +dropdown('Dropdown', 'Default', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')
 
-        <div class="star-rating">
-            <fieldset>
-                <input type="radio" id="stars5" name="rating" value="50" /><label for="stars5" title="Outstanding">5</label>
-                <input type="radio" id="stars4" name="rating" value="40" /><label for="stars4" title="Very Good">4</label>
-                <input type="radio" id="stars3" name="rating" value="30" /><label for="stars3" title="Good">3</label>
-                <input type="radio" id="stars2" name="rating" value="20" /><label for="stars2" title="Poor">2</label>
-                <input type="radio" id="stars1" name="rating" value="10" /><label for="stars1" title="Very Poor">1</label>
-            </fieldset>
-        </div>
+        div.form-element 
+            +dropdown('Dropdown', 'Default', '3 гостя', 'Взрослые', 'Дети', 'Младенцы')
+
+        div.form-element 
+            +rich-checkbox-buttons('checkbox_button_2', 'Rich checkbox buttons', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')
+
+
 
 block footer
     div bla 

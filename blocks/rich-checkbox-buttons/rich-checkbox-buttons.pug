@@ -1,0 +1,9 @@
+mixin rich-checkbox-buttons(rich_checkbox_btn_name, label, ...items)
+    div.rich-checkbox-buttons 
+        div.rich-checkbox-buttons__title.font_h3= label
+        div.rich-checkbox-buttons__wrapper.font_body
+            -for(var i=0; i<items.length; i=i+2)
+                input(type="checkbox" class="rich-checkbox-button" name=rich_checkbox_btn_name id=rich_checkbox_btn_name+"_id_"+i)
+                label.rich-checkbox-buttons__item_label.font_h3(for=rich_checkbox_btn_name+"_id_"+i)= items[i]
+                    p.rich-checkbox-buttons__item_body.font_body= items[i+1]
+                <br>
