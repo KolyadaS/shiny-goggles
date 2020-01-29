@@ -1,0 +1,48 @@
+.feedback {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback__row1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.feedback__row2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.feedback__userpic {
+    width: 48px;
+    height: 48px;
+    display: block;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.feedback__name-and-date {
+    width: 653px;
+}
+
+.feedback__name-and-date p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.name-and-date__name {
+    font-weight: bold;
+}
+
+.feedback__like-button {
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.feedback__text {
+    width: 653px;
+}

@@ -1,0 +1,12 @@
+mixin feedback(pic_url, name, when_written, fdb_text)
+    div.feedback 
+        div.feedback__row1
+            div.feedback__userpic
+                img(src= pic_url)
+            div.feedback__name-and-date.font_body 
+                p.name-and-date__name= name
+                p= when_written
+        div.feedback__row2
+            div.feedback__like-button
+                +like-button('like-button-for-feedback-of'+name)
+            div.feedback__text.font_body= fdb_text
