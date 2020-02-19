@@ -19,6 +19,7 @@ include ../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
 include ../blocks/feedback/feedback.pug
 include ../blocks/button-framed/button-framed.pug
 include ../blocks/button-link/button-link.pug
+include ../blocks/button-colored-long/button-colored-long.pug
 
 block style 
     link(rel="stylesheet", href="../style.scss")
@@ -113,6 +114,8 @@ block main
                 div.form-element__buttons
                     +button-link('form-element__btn-ex', '#', 'Click me', 'grey')
                     +button-link('form-element__btn-ex', '#', 'Click me', 'purple')
+                div 
+                    +button-colored-long('form-element__btn-ex', '#', 'Перейти к оплате')
 
 block footer
     div  
