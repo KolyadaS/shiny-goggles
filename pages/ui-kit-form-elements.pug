@@ -17,6 +17,8 @@ include ../blocks/like-button/like-button.pug
 include ../blocks/rate-button/rate-button.pug
 include ../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
 include ../blocks/feedback/feedback.pug
+include ../blocks/button-framed/button-framed.pug
+include ../blocks/button-link/button-link.pug
 
 block style 
     link(rel="stylesheet", href="../style.scss")
@@ -98,6 +100,19 @@ block main
         div.form-element 
             +feedback('../blocks/images/userpic.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару &mdash; никто не жаловался из соседей.')
 
+        div.form-element ТУТ ДОЛЖЕН БЫТЬ RANGE SLIDER
+
+        div.form-element.font_h3
+            div Buttons
+                div.form-element__buttons 
+                    +button-colored('form-element__btn-ex', '#', 'CLICK ME')
+                    +button-colored('form-element__btn-ex', '#', 'CLICK ME')
+                div.form-element__buttons
+                    +button-framed('form-element__btn-ex', '#', 'CLICK ME')
+                    +button-framed('form-element__btn-ex', '#', 'CLICK ME')
+                div.form-element__buttons
+                    +button-link('form-element__btn-ex', '#', 'Click me', 'grey')
+                    +button-link('form-element__btn-ex', '#', 'Click me', 'purple')
 
 block footer
     div  

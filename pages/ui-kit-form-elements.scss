@@ -25,3 +25,12 @@
     display: inline-block;
     padding-right: 20px;
 }
+
+.form-element__buttons {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.form-element__btn-ex:first-child {
+    margin-right: 20px;
+}
