@@ -20,6 +20,7 @@ include ../blocks/feedback/feedback.pug
 include ../blocks/button-framed/button-framed.pug
 include ../blocks/button-link/button-link.pug
 include ../blocks/button-colored-long/button-colored-long.pug
+include ../blocks/pagination/pagination.pug
 
 block style 
     link(rel="stylesheet", href="../style.scss")
@@ -116,6 +117,21 @@ block main
                     +button-link('form-element__btn-ex', '#', 'Click me', 'purple')
                 div 
                     +button-colored-long('form-element__btn-ex', '#', 'Перейти к оплате')
+
+        div.form-element 
+            div.font_h3 Pagination
+            div.paginaton__buttons
+                div.pagination__first-button.font_body 1
+                div.pagination__button.font_body
+                    +new-link('#', 'pagination__link', '2')
+                div.pagination__button.font_body 
+                    +new-link('#', 'pagination__link', '3')
+                div.pagination__button.font_body 
+                    +new-link('#', 'pagination__link', '...') 
+                div.pagination__button.font_body 
+                    +new-link('#', 'pagination__link', '15')
+                div.pagination__last-button.font_body
+            div.font_body 1-12 из 100+ вариантов аренды
 
 block footer
     div  
