@@ -1,11 +1,47 @@
 {
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.6.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
     "pug": "^2.0.4",
-    "sass": "^1.24.4"
+    "pug-loader": "^2.4.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "ion-rangeslider": "^2.3.1",
-    "jquery.maskedinput": "^1.4.1"
-  }
+    "jquery": "^3.5.1",
+    "jquery.maskedinput": "^1.4.1",
+    "underscore": "^1.10.2"
+  },
+  "name": "shiny-goggles",
+  "description": "me shiny-goggles project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KolyadaS/shiny-goggles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KolyadaS/shiny-goggles/issues"
+  },
+  "homepage": "https://github.com/KolyadaS/shiny-goggles#readme"
 }
