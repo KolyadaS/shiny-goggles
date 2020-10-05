@@ -74,6 +74,15 @@ module.exports = {
       filename: 'index.html',
       scriptLoading: 'defer',
     }),
+
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/pages/ui-kit-cards.pug',
+      filename: './pages/ui-kit-cards.html',
+      scriptLoading: 'defer',
+    }),
+
+
     // new WebpackMd5Hash()
   ]
 };
