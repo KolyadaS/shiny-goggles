@@ -1,6 +1,6 @@
-//- include ../button-colored/button-colored.pug
-//- include ../button-framed/button-framed.pug
-//- include ../new-link/new-link.pug
+include ../button-colored/button-colored.pug
+include ../button-framed/button-framed.pug
+include ../new-link/new-link.pug
 include ../logo/logo.pug
 
 header.header 
@@ -9,33 +9,33 @@ header.header
             +logo('./blocks/images/icon.svg', './blocks/images/toxin.svg')
 
     div.header__menu.font_body
-        //- ul.menu
-        //-     li
-        //-         +new-link('index.pug', 'menu-item', 'О нас')
-        //-     li
-        //-         +new-link('index.pug', 'menu-item down', 'Услуги')
-        //-         ul.submenu
-        //-             li
-        //-                 +new-link('index.pug', 'menu-item', 'Услуга1')
-        //-             li 
-        //-                 +new-link('index.pug', 'menu-item', 'Услуга2')
-        //-     li
-        //-         +new-link('index.pug', 'menu-item', 'Вакансии')
-        //-     li
-        //-         +new-link('index.pug', 'menu-item', 'Новости')
-        //-     li
-        //-         +new-link('index.pug', 'menu-item down', 'Соглашения')
-        //-         ul.submenu
-        //-             li
-        //-                 +new-link('./pages/ui-kit-color-and-type.pug', 'menu-item', 'Color & Types')
-        //-             li 
-        //-                 +new-link('./pages/ui-kit-form-elements.pug', 'menu-item', 'Form Elements')
-        //-             li 
-        //-                 +new-link('./pages/ui-kit-cards.pug', 'menu-item', 'Cards')
-        //-             li 
-        //-                 +new-link('./pages/ui-kit-headers-and-footers.pug', 'menu-item', 'Headers & Footers')
-        //-     li
-        //-         div.header__buttons
-        //-             +button-framed('login-button font_h3', 'index.pug','Войти')
-        //-             +button-colored('signup-button font_h3', 'index.pug','Зарегистрироваться')
+        ul.menu
+            li
+                +new-link('index.html', 'menu-item', 'О нас')
+            li
+                +new-link('index.html', 'menu-item down', 'Услуги')
+                ul.submenu
+                    li
+                        +new-link('index.html', 'menu-item', 'Услуга1')
+                    li 
+                        +new-link('index.html', 'menu-item', 'Услуга2')
+            li
+                +new-link('index.html', 'menu-item', 'Вакансии')
+            li
+                +new-link('index.html', 'menu-item', 'Новости')
+            li
+                +new-link('index.html', 'menu-item down', 'Соглашения')
+                ul.submenu
+                    li
+                        +new-link('./pages/ui-kit-color-and-type.html', 'menu-item', 'Color & Types')
+                    li 
+                        +new-link('./pages/ui-kit-form-elements.html', 'menu-item', 'Form Elements')
+                    li 
+                        +new-link('./pages/ui-kit-cards.html', 'menu-item', 'Cards')
+                    li 
+                        +new-link('./pages/ui-kit-headers-and-footers.html', 'menu-item', 'Headers & Footers')
+            li
+                div.header__buttons
+                    +button-framed('login-button font_h3', 'index.html','Войти')
+                    +button-colored('signup-button font_h3', 'index.html','Зарегистрироваться')
     

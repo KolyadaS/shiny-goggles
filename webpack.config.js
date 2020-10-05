@@ -45,11 +45,11 @@ module.exports = {
         loader: 'pug-loader'
       },
       {
-        test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+        test: /\.(jpe?g|gif|png|svg|woff|ttf|eot|otf)$/,
         use: {
           loader: 'file-loader',
           options: {
-            name: './blocks/images/[name].[ext]',
+            name: './blocks/[folder]/[name].[ext]',
           }
         },
       },

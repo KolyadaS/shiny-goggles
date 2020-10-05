@@ -9,11 +9,11 @@ $color1: #BC9CFF;
 $page-width: 1440px;
 $main-margin: 140px;
 
-// @import '../blocks/fonts/fonts.scss';
+@import '../blocks/fonts/fonts.scss';
 @import '../blocks/logo/logo.scss';
 @import '../blocks/page.header/header.scss';
-// @import '../blocks/button-colored/button-colored.scss';
-// @import '../blocks/button-framed/button-framed.scss';
+@import '../blocks/button-colored/button-colored.scss';
+@import '../blocks/button-framed/button-framed.scss';
 @import '../blocks/page.main/main.scss';
 // @import '../blocks/dropdown/dropdown.scss';
 // @import '../blocks/expandable-checkbox-list/expandable-checkbox-list.scss';
@@ -44,5 +44,4 @@ $main-margin: 140px;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "main" "footer";
     grid-gap: 0px;
-    // background-color: #BC9CFF;
 }
