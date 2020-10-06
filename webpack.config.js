@@ -82,6 +82,27 @@ module.exports = {
       scriptLoading: 'defer',
     }),
 
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/pages/ui-kit-color-and-type.pug',
+      filename: './pages/ui-kit-color-and-type.html',
+      scriptLoading: 'defer',
+    }),
+
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/pages/ui-kit-form-elements.pug',
+      filename: './pages/ui-kit-form-elements.html',
+      scriptLoading: 'defer',
+    }),
+
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/pages/ui-kit-headers-and-footers.pug',
+      filename: './pages/ui-kit-headers-and-footers.html',
+      scriptLoading: 'defer',
+    }),
+
 
     // new WebpackMd5Hash()
   ]

@@ -1,9 +1,9 @@
 extends ../templates/page_template.pug
 
-include ../blocks/icon/icon.pug
+include ../blocks/logo/logo.pug
 
-block style 
-    link(rel="stylesheet", href="../style.scss")
+//- block style 
+//-     link(rel="stylesheet", href="../style.scss")
 
 block title
   title Color &amp; Type
@@ -12,7 +12,7 @@ block header
         div.header2
             div.header__logo
                 div.logo 
-                    a(href="../index.pug")
+                    a(href="../index.html")
                         +logo('../blocks/images/icon.svg', '../blocks/images/toxin.svg')
 
 block main
