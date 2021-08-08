@@ -18,14 +18,14 @@
 
 .rate-button > .rate-button__fieldset > input:not(:checked) + label:before {
     position: relative;
-    content: url(./blocks/images/star_border.svg);
+    content: url(../blocks/images/star_border.svg);
     border-color: transparent; 
 }
 
 .rate-button > .rate-button__fieldset > input:checked ~ label::before {
     position: relative;
     border-color: transparent;
-    content: url(./blocks/images/star.svg);
+    content: url(../blocks/images/star.svg);
 }
 
 .rate-button > .rate-button__fieldset > input:not(:checked) + label:after {

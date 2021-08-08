@@ -9,7 +9,7 @@
     align-items: center;
     width: 266px;
     height: 44px;
-    background: url(./blocks/images/expand_more.svg) no-repeat 245px center;
+    background: url(../blocks/images/expand_more.svg) no-repeat 245px center;
 }
 
 .expandable-checkbox-list__items {
@@ -37,11 +37,11 @@
 }
 
 .second-block:hover ~ .first-block {
-    background: url(./blocks/images/collapse.svg) no-repeat 245px center;
+    background: url(../blocks/images/collapse.svg) no-repeat 245px center;
 }
 
 .first-block:hover {
-    background: url(./blocks/images/collapse.svg) no-repeat 245px center;
+    background: url(../blocks/images/collapse.svg) no-repeat 245px center;
 }
 
 input[type="checkbox"]:checked, 

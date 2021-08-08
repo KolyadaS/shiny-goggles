@@ -20,7 +20,7 @@
 .expand-more-icon {
     width: 44px;
     height: 44px;
-    background: url(./blocks/images/expand_more.svg) no-repeat center center;
+    // background: url(../blocks/images/expand_more.svg) no-repeat center center;
 }
 
 .dropdown-menu__wrapper {
@@ -39,7 +39,7 @@
     width: 320px;
     height: 44px;
     padding-left: 15px;
-    background: url(./blocks/images/expand_more.svg) no-repeat 295px center;
+    background: url(../blocks/images/expand_more.svg) no-repeat 295px center;
 }
 
 .dropdown_submenu {
@@ -56,7 +56,7 @@
     width: 30px;
     height: 30px;
     margin-right: 10px;
-    background: url(./blocks/images/round_button_minus.svg) no-repeat center center;
+    background: url(../blocks/images/round_button_minus.svg) no-repeat center center;
     border: none;
 }
 
@@ -64,7 +64,7 @@
     width: 30px;
     height: 30px;
     margin-left: 10px;
-    background: url(./blocks/images/round_button_plus.svg) no-repeat center center;
+    background: url(../blocks/images/round_button_plus.svg) no-repeat center center;
     border: none;
 }
 

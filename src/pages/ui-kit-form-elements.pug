@@ -1,30 +1,33 @@
 extends ../templates/page_template.pug
 
 include ../blocks/logo/logo.pug
-//- include ../blocks/text-field/text-field.pug
-//- include ../blocks/dropdown/dropdown.pug
-//- include ../blocks/masked-text-field/masked-text-field.pug
-//- include ../blocks/date-dropdown/date-dropdown.pug
-//- include ../blocks/filter-date-dropdown/filter-date-dropdown.pug
-//- include ../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
-//- include ../blocks/subscription-text-field/subscription-text-field.pug
-//- include ../blocks/search-form/search-form.pug
-//- include ../blocks/icon-text-list/icon-text-list.pug
-//- include ../blocks/checkbox-buttons/checkbox-buttons.pug
-//- include ../blocks/radio-buttons/radio-buttons.pug
-//- include ../blocks/toggle/toggle.pug
-//- include ../blocks/like-button/like-button.pug
-//- include ../blocks/rate-button/rate-button.pug
-//- include ../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
-//- include ../blocks/feedback/feedback.pug
-//- include ../blocks/button-framed/button-framed.pug
-//- include ../blocks/button-link/button-link.pug
-//- include ../blocks/button-colored-long/button-colored-long.pug
+include ../blocks/text-field/text-field.pug
+include ../blocks/dropdown/dropdown.pug
+include ../blocks/masked-text-field/masked-text-field.pug
+include ../blocks/date-dropdown/date-dropdown.pug
+include ../blocks/filter-date-dropdown/filter-date-dropdown.pug
+include ../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
+include ../blocks/subscription-text-field/subscription-text-field.pug
+include ../blocks/icon-text-list/icon-text-list.pug
+include ../blocks/checkbox-buttons/checkbox-buttons.pug
+include ../blocks/radio-buttons/radio-buttons.pug
+include ../blocks/toggle/toggle.pug
+include ../blocks/like-button/like-button.pug
+include ../blocks/rate-button/rate-button.pug
+include ../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
+include ../blocks/feedback/feedback.pug
+include ../blocks/button-colored/button-colored.pug
+include ../blocks/button-framed/button-framed.pug
+include ../blocks/button-link/button-link.pug
+include ../blocks/button-colored-long/button-colored-long.pug
 //- include ../blocks/pagination/pagination.pug
-//- include ../blocks/range-slider/range-slider.pug
+include ../blocks/range-slider/range-slider.pug
+//- include ../blocks/search-form/search-form.pug
 
-//- block style 
-//-     link(rel="stylesheet", href="../style.scss")
+block style 
+    link(href="../../node_modules/air-datepicker/dist/css/datepicker.min.css", rel="stylesheet", type="text/css")
+    script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(type="text/javascript", src="../../node_modules/air-datepicker/dist/js/datepicker.min.js")
 
 block title
   title Form Elements
@@ -34,118 +37,108 @@ block header
         a(href="../index.html")
             +logo('../blocks/images/icon.svg', '../blocks/images/toxin.svg')
 
-//- block main
-//-     div.main-wrapper
-//-         div.form-element
-//-             +text-field('Text field', 'default', 'Email')
+block main
+    div.main-wrapper
+        div.form-element
+            +text-field('Text field', 'default', 'Email')
 
-//-         div.form-element
-//-             +text-field('Text field', 'Hover/focus', 'This is pretty awesome')
+        div.form-element
+            +text-field('Text field', 'Hover/focus', 'This is pretty awesome')
 
-//-         div.form-element
-//-             +dropdown('Dropdown', ' ', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')    
+        div.form-element
+            +dropdown('Dropdown', ' ', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')    
 
-//-         div.form-element
-//-             +masked-text-field('Masked text field', 'default', 'ДД.ММ.ГГГГ')
+        div.form-element
+            +masked-text-field('Masked text field', 'default', 'ДД.ММ.ГГГГ')
 
-//-         div.form-element 
-//-             +date-dropdown('Date dropdown', 'Date dropdown')
+        div.form-element 
+            +date-dropdown('Date dropdown', 'Date dropdown')
 
-//-         div.form-element 
-//-             +filter-date-dropdown('Filter date dropdown')
+        div.form-element 
+            +filter-date-dropdown('Filter date dropdown')
 
-//-         div.form-element
-//-             +subscription-text-field('Subscription text field', 'Email')
+        div.form-element
+            +subscription-text-field('Subscription text field', 'Email')
 
-//-         div.form-element
-//-             +dropdown('Dropdown', 'Default', 'Сколько гостей1', 'Взрослые1', 'Дети1', 'Младенцы1')
+        div.form-element
+            +dropdown('Dropdown', 'Default', 'Сколько гостей1', 'Взрослые1', 'Дети1', 'Младенцы1')
 
-//-         div.form-element 
-//-             +expandable-checkbox-list('Dropdown', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь')
+        div.form-element 
+            +expandable-checkbox-list('Dropdown', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь')
 
-//-         div.form-element 
-//-             +icon-text-list('../blocks/images/insert_emoticon.svg', 'Комфорт', 'Шумопоглощающие стены')
-//-             +icon-text-list('../blocks/images/location_city.svg', 'Удобство', 'Окно в каждой из спален')
+        //- не отображаются картинки
+        div.form-element 
+            +icon-text-list('blocks/images/insert_emoticon.svg', 'Комфорт', 'Шумопоглощающие стены (нет картинки)')
+            +icon-text-list('../blocks/images/location_city.svg', 'Удобство', 'Окно в каждой из спален (нет картинки)')
 
-//-         div.form-element 
-//-             +checkbox-buttons('checkbox_button_1', 'Checkbox buttons', 'Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
+        div.form-element 
+            +checkbox-buttons('checkbox_button_1', 'Checkbox buttons', 'Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
 
-//-         div.form-element 
-//-             +radio-buttons('Radio buttons', 'Мужчина', 'Женщина')
+        div.form-element 
+            +radio-buttons('Radio buttons', 'Мужчина', 'Женщина')
 
-//-         div.form-element 
-//-             +toggle('Toggle', 'Получать спецпредложения')
+        div.form-element 
+            +toggle('Toggle', 'Получать спецпредложения')
 
-//-         div.form-element 
-//-             +toggle('', 'Получать спецпредложения')
+        div.form-element
+            div.form-element__label.font_h3 Like buttons
+            div.form-element__like-button
+                +like-button('Лайки кнопка 1')
+                +like-button('Лайки кнопка 2')
 
-//-         div.form-element
-//-             div.form-element__label.font_h3 Like buttons
-//-             div.form-element__like-button
-//-                 +like-button('Лайки кнопка 1')
-//-                 +like-button('Лайки кнопка 2')
+        div.form-element 
+            div.form-element__label.font_h3 Rate buttons
+            div.form-element__rate-button
+                +rate-button('rating_demo1')
+                +rate-button('rating_demo2')
 
-//-         div.form-element 
-//-             div.form-element__label.font_h3 Rate buttons
-//-             div.form-element__rate-button
-//-                 +rate-button('rating_demo1')
-//-                 +rate-button('rating_demo2')
+        div.form-element 
+            +dropdown('Dropdown', 'Default', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')
 
-//-         div.form-element 
-//-             +dropdown('Dropdown', 'Default', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')
+        div.form-element 
+            +dropdown('Dropdown', 'Default', '3 гостя', 'Взрослые', 'Дети', 'Младенцы')
 
-//-         div.form-element 
-//-             +dropdown('Dropdown', 'Default', '3 гостя', 'Взрослые', 'Дети', 'Младенцы')
+        div.form-element 
+            +rich-checkbox-buttons('checkbox_button_2', 'Rich checkbox buttons', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')
 
-//-         div.form-element 
-//-             +rich-checkbox-buttons('checkbox_button_2', 'Rich checkbox buttons', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')
+        div.form-element 
+            +feedback('../blocks/images/userpic.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару &mdash; никто не жаловался из соседей.')
 
-//-         div.form-element 
-//-             +feedback('../blocks/images/userpic.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару &mdash; никто не жаловался из соседей.')
+        //- div.form-element
+        //-     div.form-element__range-slider-label
+        //-         +range-slider
 
-//-         div.form-element
-//-             div.form-element__range-slider-label
-//-                 div.form-element__range-slider-label-left.font_h3 Range slider 
-//-                 div.form-element__range-slider-label-right.font_body 5000Р - 10000Р
-//-             div ionRangeSlider
-//-                 <div class="range-slider">
-//-                     <input type="text" class="js-range-slider" value="" />
-//-                 </div>
-//-                 <div class="extra-controls">
-//-                     <input type="text" class="js-input-from" value="0" />
-//-                     <input type="text" class="js-input-to" value="0" />
-//-                 </div>
+        div.form-element.font_h3
+            div Buttons
+                div.form-element__buttons 
+                    +button-colored('form-element__btn-ex', '#', 'CLICK ME')
+                    +button-colored('form-element__btn-ex', '#', 'CLICK ME')
+                div.form-element__buttons
+                    +button-framed('form-element__btn-ex', '#', 'CLICK ME')
+                    +button-framed('form-element__btn-ex', '#', 'CLICK ME')
+                div.form-element__buttons
+                    +button-link('form-element__btn-ex', '#', 'Click me', 'grey')
+                    +button-link('form-element__btn-ex', '#', 'Click me', 'purple')
+                div 
+                    +button-colored-long('form-element__btn-ex', '#', 'Перейти к оплате')
 
-        
+        //- div.form-element 
+        //-     div.font_h3 Pagination
+        //-     div.paginaton__buttons
+        //-         div.pagination__first-button.font_body 1
+        //-         div.pagination__button.font_body
+        //-             +new-link('#', 'pagination__link', '2')
+        //-         div.pagination__button.font_body 
+        //-             +new-link('#', 'pagination__link', '3')
+        //-         div.pagination__button.font_body 
+        //-             +new-link('#', 'pagination__link', '...') 
+        //-         div.pagination__button.font_body 
+        //-             +new-link('#', 'pagination__link', '15')
+        //-         div.pagination__last-button.font_body
+        //-     div.font_body 1-12 из 100+ вариантов аренды
 
-//-         div.form-element.font_h3
-//-             div Buttons
-//-                 div.form-element__buttons 
-//-                     +button-colored('form-element__btn-ex', '#', 'CLICK ME')
-//-                     +button-colored('form-element__btn-ex', '#', 'CLICK ME')
-//-                 div.form-element__buttons
-//-                     +button-framed('form-element__btn-ex', '#', 'CLICK ME')
-//-                     +button-framed('form-element__btn-ex', '#', 'CLICK ME')
-//-                 div.form-element__buttons
-//-                     +button-link('form-element__btn-ex', '#', 'Click me', 'grey')
-//-                     +button-link('form-element__btn-ex', '#', 'Click me', 'purple')
-//-                 div 
-//-                     +button-colored-long('form-element__btn-ex', '#', 'Перейти к оплате')
-
-//-         div.form-element 
-//-             div.font_h3 Pagination
-//-             div.paginaton__buttons
-//-                 div.pagination__first-button.font_body 1
-//-                 div.pagination__button.font_body
-//-                     +new-link('#', 'pagination__link', '2')
-//-                 div.pagination__button.font_body 
-//-                     +new-link('#', 'pagination__link', '3')
-//-                 div.pagination__button.font_body 
-//-                     +new-link('#', 'pagination__link', '...') 
-//-                 div.pagination__button.font_body 
-//-                     +new-link('#', 'pagination__link', '15')
-//-                 div.pagination__last-button.font_body
-//-             div.font_body 1-12 из 100+ вариантов аренды
+        //- div.form-element
+        //-   +search-form
 
 block footer
     div  

@@ -1,15 +1,3 @@
-.form-element__range-slider-label {
-    display: flex;
-    justify-content: space-between;
-    width: 266px;
-}
-
-.form-element__range-slider-label-right {
-    line-height: 15px;
-}
-
-
-
 .range-slider__wrapper {
     margin-top: 10px;
     width: 266px;

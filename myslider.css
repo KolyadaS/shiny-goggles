@@ -1,0 +1,67 @@
+/* .filter {
+    padding: 30px;
+    width: 500px;
+}
+
+ .filter>div {
+    padding-top: 20px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+ }
+
+
+.filter>div>div {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+  
+.filter .slider {
+    margin-top: 10px;
+    position: relative;
+    height: 6px;
+    background: white;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 12px;
+}
+
+
+.filter .color-range {
+    position: absolute;
+    background: #6FCF97;
+    width: 97%;
+    border: none;
+    height: 6px;
+    left: 15px;
+}
+
+
+.filter .block-min, .block-max {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  background: #6FCF97;
+  border: 2px solid white;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+
+.filter .block-max{
+    left: 97%;
+}
+ */
