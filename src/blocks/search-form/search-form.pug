@@ -8,6 +8,6 @@ mixin search-form
             <input type="text" id="blabla1" class="datepicker-here" data-range="true" data-multiplee-dates-separator=" - " />
         div.search-form__check-out.font_h3 Выезд 
             <input type="text" id="blabla2" class="datepicker-here" />
-        div Гости тут
-            +dropdown
+        div
+            +dropdown('Dropdown', 'Default', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')
         +button-colored('search_room font_h3', '#','Подобрать номер')
