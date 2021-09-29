@@ -1,40 +1,25 @@
 include ../new-link/new-link.pug
 include ../button-link/button-link.pug
 
-mixin dropdown(leftlabel, rightlabel, text, item1, item2, item3)
-    div.dropdown 
-        div.dropdown__label-wrapper
-            div.dropdown-label.font_h3= leftlabel
-            div.dropdown-label.dropdown-label2= rightlabel
-        div.dropdown__dropdown-menu
-            div.dropdown-menu
-                div.dropdown-menu__wrapper
-                    div.dropdown-menu__item= text
-                    
-                div.dropdown_submenu.font_h3
-                    div.dropdown__item
-                        div.item__wrapper
-                            div.guest-content= item1
-                            div.buttons-wrapper
-                                button.round_button_minus
-                                div.guest-content 0
-                                button.round_button_plus
-                    div.dropdown__item 
-                        div.item__wrapper
-                            div.guest-content= item2
-                            div.buttons-wrapper
-                                button.round_button_minus
-                                div.guest-content 0
-                                button.round_button_plus
-                    div.dropdown__item
-                        div.item__wrapper
-                            div.guest-content= item3
-                            div.buttons-wrapper
-                                button.round_button_minus
-                                div.guest-content 0
-                                button.round_button_plus
-                    div.clear-apply-buttons 
-                        div 
-                            +button-link('dropdown-menu-item font_h3 dropdown_button_clear', '#', 'Очистить', 'grey')
-                        div 
-                            +button-link('dropdown-menu-item font_h3 dropdown_button_clear', '#', 'Применить', 'purple')
+//- mixin dropdown(leftlabel, rightlabel, placeholderText, item1, item2, item3)
+mixin dropdown(uniqID, leftlabel, rightlabel, placeholderText, ...items)
+    .dropdown 
+        .dropdown__label-wrapper
+            .dropdown__label_left= leftlabel
+            .dropdown__label_right= rightlabel
+        .dropdown__menu= placeholderText
+            .dropdown-menu__button
+        .dropdown__submenu_wrapper
+            .dropdown__submenu
+                - var i=0
+                each item in items 
+                    .item-content(class= uniqID + "-dropdown-item-" + i)= item
+                        .buttons-wrapper
+                            button.button_minus(class= uniqID + "-minus-" + i)
+                            .guest-content(class= "guest-content-" + i) 0
+                            button.button_plus(class= uniqID + "-plus-" + i++)
+                .dropdown__submenu__buttons 
+                    div.dropdown__button_clear 
+                        +button-link('font_h3 dropdown__button_clear', 'javascript:void(0);', 'Очистить')
+                    div.dropdown__button_apply 
+                        +button-link('font_h3 dropdown__button_apply', 'javascript:void(0);', 'Применить')

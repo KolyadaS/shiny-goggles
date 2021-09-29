@@ -1,26 +1,21 @@
 .button_colored_long {
-    color: #FFFFFF;
-    display: inline-block;
-    width: 320px;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-    border-radius: 20px;
-    transform-style: preserve-3d;
-    }
+  color: white;
+  width: 320px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+}
 
-
-.button_colored_long:before {
-    position: absolute;
-    content: url(../blocks/images/arrow_forward_white.svg);
-    text-align: end;
-    padding-top: 14px;
-    padding-right: 14px;
-    top: -2px;
-    right: -2px;
-    bottom: -2px;
-    left: -2px;
-    border-radius: 22px;
-    background: linear-gradient(180deg, #BC9CFF, #8BA4F9);
-    transform: translateZ(-1px);
+.button_colored_long__arrow {
+  position: relative;
+  left: 276px;
+  top: -44px;
+  background-image: url(../blocks/images/arrow_forward_white.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 44px;
+  height: 44px;
+  border-radius: 20px;
 }

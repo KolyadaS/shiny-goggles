@@ -1,5 +1,6 @@
 .date-dropdown {
-    display: inline-flex;
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 320px;
     height: 64px;
@@ -7,11 +8,14 @@
 }
 
 .date-dropdown__date1 {
+    display: flex;
+    flex-wrap: wrap;
     width: 150px;
-    margin-right: 20px;
 }
 
 .date-dropdown__date2 {
+    display: flex;
+    flex-wrap: wrap;
     width: 150px;
 }
 
@@ -22,7 +26,7 @@
     border: 1px solid $main-color25;
     color: $main-color75;
     height: 44px;
-    width: 150px;
+    width: 100%;
     padding-left: 15px;
     background: url(../blocks/images/expand_more.svg) no-repeat 120px center;
     margin-top: 5px;

@@ -1,13 +1,10 @@
-include ../button-colored/button-colored.pug
+include ../button-colored-long/button-colored-long.pug
 include ../dropdown/dropdown.pug
+include ../date-dropdown/date-dropdown.pug
 
-mixin search-form
+mixin search-form(uniqID)
     div.content__search-form
         div.search-form__title.font_h1 Найдем номера под ваши пожелания
-        div.search-form__check-in.font_h3 Прибытие
-            <input type="text" id="blabla1" class="datepicker-here" data-range="true" data-multiplee-dates-separator=" - " />
-        div.search-form__check-out.font_h3 Выезд 
-            <input type="text" id="blabla2" class="datepicker-here" />
-        div
-            +dropdown('Dropdown', 'Default', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')
-        +button-colored('search_room font_h3', '#','Подобрать номер')
+        +date-dropdown('Прибытие', 'Выезд')
+        +dropdown(uniqID, 'Dropdown', 'Default', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы', 'яйца')
+        +button-colored-long('search-form__button font_h3', '#','Подобрать номер')

@@ -1,12 +1,3 @@
-mixin button-link(class_name, href, text, color)
-    - var btn_color= color
-    case btn_color
-        when 'grey'
-            a(href=href)
-                div.button_link.button_link_grey(class=class_name)= text
-        when 'purple'
-            a(href=href)
-                div.button_link.button_link_purple(class=class_name)= text
-        default
-            a(href=href)
-                div.button_link(class=class_name)= text
+mixin button-link(class_name, href, text)
+    a(href=href)
+        div.button_link(class=class_name)= text
