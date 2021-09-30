@@ -1,0 +1,24 @@
+include ../text-field/text-field.pug
+include ../radio-buttons/radio-buttons.pug
+include ../radio-buttons/radio-buttons.pug
+include ../masked-text-field/masked-text-field.pug
+include ../toggle/toggle.pug
+include ../dropdown/dropdown.pug
+include ../button-colored-long/button-colored-long.pug
+include ../button-framed/button-framed.pug
+        
+mixin registration-form
+    div.registration-form
+        div.font_h1 Регистрация
+        div.registration-form__name-surname-sex
+            +text-field('', '', 'Имя')
+            +text-field('', '', 'Фамилия')
+            +radio-buttons('', 'Мужчина', 'Женщина')
+        +masked-text-field('Дата рождения', '', 'ДД.ММ.ГГГГ')
+        div.registration-form__email-password-toggle
+            +text-field('Данные для входа в сервис', '', 'Email')
+            +text-field('', '', 'Пароль')
+            +toggle('', 'Получать спецпредложения')
+        +button-colored-long('form-element__btn-ex', '#', 'Перейти к оплате')
+        div Уже есть аккаунт на Toxin
+        +button-framed('form-element__btn-ex', '#', 'CLICK ME')

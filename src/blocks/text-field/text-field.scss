@@ -1,6 +1,6 @@
 .text-field-form {
     width: 320px;
-    min-height: 64px;
+    max-height: 64px;
 }
 
 .text-field-form__label-wrapper {
@@ -19,6 +19,7 @@
 
 .text-field-wrapper {
     display: inline-flex;
+    margin-top: 5px;
 }
 
 .text-field-wrapper > input {
@@ -26,10 +27,9 @@
     color: $main-color25;
     border-radius: 4px; 
     border: 1px solid $main-color25;
-    padding-left: 15px;
+    padding: 0px 0px 0px 15px;
     height: 44px;
     width: 320px;
-    margin-top: 5px;
 }
 
 .text-field-wrapper > input:hover,
