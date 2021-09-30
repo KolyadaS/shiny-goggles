@@ -13,7 +13,7 @@ mixin registration-form
         div.registration-form__name-surname-sex
             +text-field('', '', 'Имя')
             +text-field('', '', 'Фамилия')
-            +radio-buttons('', 'Мужчина', 'Женщина')
+            +radio-buttons('registration-form__chkbx', '', 'Мужчина', 'Женщина')
         +masked-text-field('Дата рождения', '', 'ДД.ММ.ГГГГ')
         div.registration-form__email-password-toggle
             +text-field('Данные для входа в сервис', '', 'Email')
