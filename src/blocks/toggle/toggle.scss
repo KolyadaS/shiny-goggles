@@ -1,5 +1,8 @@
 .toggle {
-    width: max-content;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: max-content;
 }
 
 .toggle__title {
@@ -8,16 +11,17 @@
 
 .toggle__item {
     position: relative;
-    display: inline-block;
+    // display: inline-block;
     width: 40px;
     height: 20px;
   }
 
   .toggle__slider__label {
-    display: block;
-    width: max-content;
-    max-width: $page-width - 2 * $main-margin;
-    padding-left: 50px;
+    display: inline-block;
+    width: 270px;
+    // max-width: $page-width - 2 * $main-margin;
+    height: max-content;
+    margin-left: 50px;
   }
   
   .toggle__item input[type="checkbox"] {
@@ -68,4 +72,3 @@
   .toggle__slider.toggle__slider_round:before {
     border-radius: 10px;
   } 
-

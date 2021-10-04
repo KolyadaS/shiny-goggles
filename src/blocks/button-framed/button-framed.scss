@@ -1,4 +1,5 @@
 .button_framed {
+    @extend .font_h3;
     color: #BC9CFF;
     display: inline-block;
     background: white;

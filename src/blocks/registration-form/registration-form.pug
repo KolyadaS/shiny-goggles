@@ -8,8 +8,8 @@ include ../button-colored-long/button-colored-long.pug
 include ../button-framed/button-framed.pug
         
 mixin registration-form
-    div.registration-form
-        div.font_h1 Регистрация
+    div.registration-form.font_body
+        div.font_h1 Регистрация аккаунта
         div.registration-form__name-surname-sex
             +text-field('', '', 'Имя')
             +text-field('', '', 'Фамилия')
@@ -19,6 +19,7 @@ mixin registration-form
             +text-field('Данные для входа в сервис', '', 'Email')
             +text-field('', '', 'Пароль')
             +toggle('', 'Получать спецпредложения')
-        +button-colored-long('form-element__btn-ex', '#', 'Перейти к оплате')
-        div Уже есть аккаунт на Toxin
-        +button-framed('form-element__btn-ex', '#', 'CLICK ME')
+        +button-colored-long('registration-form__button', '#', 'Перейти к оплате')
+        div.registration-form__login
+            div Уже есть аккаунт на Toxin
+            +button-framed('registration-form__button', '#', 'Войти')
