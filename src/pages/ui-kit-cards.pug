@@ -3,6 +3,7 @@ extends ../templates/page_template.pug
 include ../blocks/logo/logo.pug
 include ../blocks/search-form/search-form.pug
 include ../blocks/registration-form/registration-form.pug
+include ../blocks/apartment-detailed-card/apartment-detailed-card.pug
 
 block style 
     link(href="../../node_modules/air-datepicker/dist/css/datepicker.min.css", rel="stylesheet", type="text/css")
@@ -27,6 +28,8 @@ block main
     div.form-element
         +registration-form
 
+    div.form-element
+        +apartment-detailed-card
 
 block footer
     div bla

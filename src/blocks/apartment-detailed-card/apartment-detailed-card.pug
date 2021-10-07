@@ -1,0 +1,29 @@
+include ../../blocks/button-colored-long/button-colored-long.pug
+include ../../blocks/range-slider/range-slider.pug
+include ../../blocks/date-dropdown/date-dropdown.pug
+include ../../blocks/dropdown/dropdown.pug
+
+mixin apartment-detailed-card
+    div.apartment-detailed-card
+        div.apartment__title.apartament_row
+            div.font_h1 #888 <span class="font_h3 text-marked">люкс</span>
+            div.font_body <span class="font_h3 font_h3-gray50">9990р</span> в сутки
+        +date-dropdown('Прибытие', 'Выезд')
+        +dropdown('000-card', 'Гости', '', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')
+        div.apartment__details
+            div.apartment-price.apartament_row
+                div.font_body.apartament_first-column 9990р x 4 суток
+                div.font_body.apartament_last-column 39960р
+            div.apartment-fee.apartament_row
+                div.font_body.apartament_first-column Сбор за услуги: скидка 2179р
+                div.i-icon
+                div.font_body.apartament_last-column 0р
+            div.apartment-extra.apartament_row
+                div.font_body.apartament_first-column Сбор за дополнительные услуги
+                div.i-icon
+                div.font_body.apartament_last-column 300р
+        div.apartment-total.apartament_row
+            div.font_h1 Итого
+            div.dots
+            div.font_h1 38081р
+        +button-colored-long('apartament-detailed-card__button', '#','Забронировать')
