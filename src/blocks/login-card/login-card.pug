@@ -1,0 +1,14 @@
+include ../../blocks/button-colored-long/button-colored-long.pug
+include ../../blocks/range-slider/range-slider.pug
+include ../../blocks/date-dropdown/date-dropdown.pug
+include ../../blocks/dropdown/dropdown.pug
+
+mixin login-card
+    .login-card
+        .login-card_title.font_h1 Войти
+        .login-card_email-password
+            +text-field('', '', 'Email')
+            +text-field('', '', 'Пароль')
+        +button-colored-long('login-card_button_login', '#', 'Войти')
+        div.login-card_signup.font_body Нет аккаунта на Toxin?
+            +button-framed('login-card_button_signup', '#', 'Создать')
