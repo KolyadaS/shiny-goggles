@@ -1,5 +1,4 @@
 .button_link {
-    display: inline-block;
-    text-align: center;
+    @extend .font_h3;
     color: $color1;
 }
