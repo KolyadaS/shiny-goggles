@@ -1,0 +1,9 @@
+include ../../blocks/button-link/button-link.pug
+
+mixin calendar-card
+    div.calendar-card
+        div.calendar-card__scaled(class="datepicker-here" data-range="true" data-multiplee-dates-separator=" - " )
+        div.calendar-card__button.calendar-card__button_clear
+            +button-link("calendar-card__button_clear", "#", "очистить")
+        div.calendar-card__button.calendar-card__button_apply
+            +button-link('calendar-card__button_apply', '#', 'применить')
