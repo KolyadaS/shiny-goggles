@@ -174,3 +174,41 @@
 .datepicker--cell.-range-from-.-range-to- {
   border-radius: 22px;
 }
+
+.datepicker-inline .datepicker {
+  border: none;
+}
+
+.datepicker-inline {
+  width: 280px;
+}
+
+.datepicker--nav {
+  border-bottom: none;
+  padding: 0px 0px 30px 0px;
+}
+
+.datepicker--content {
+  padding: 0px 0px 0px 0px;
+}
+
+.datepicker {
+  width: 280px;
+}
+
+.datepicker--cell {
+  height: 40px;
+  width: 40px;
+}
+
+.datepicker--nav {
+  width: 280px;
+}
+
+.datepicker--nav-title {
+  @extend .font_h1;
+}
+
+.datepicker--days {
+  width: 280px;
+}
