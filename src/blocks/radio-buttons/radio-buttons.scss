@@ -1,11 +1,7 @@
 .radio-buttons {
     max-width: 320px;
     display: flex;
-    flex-wrap: wrap;
-}
-
-.radio-buttons__items :not(:last-child) {
-    padding-right: 20px;
+    flex-direction: column;
 }
 
 .radio-buttons__title {
@@ -13,22 +9,23 @@
     max-width: 320px;
 }
 
-input[type="radio"]:checked, 
-input[type="radio"]:not(:checked) 
+.radio-button_input:checked, 
+.radio-button_input:not(:checked) 
 {
     position: absolute;
     left: -9999px;
 }
 
-input[type="radio"]:checked + label, 
-input[type="radio"]:not(:checked) + label {
-    display: inline-block;
+.radio-button_input:checked + .radio-button_label, 
+.radio-button_input:not(:checked) + .radio-button_label {
+    display: inline-flex;
     position: relative;
     padding-left: 30px;
+    padding-right: 20px;
 }
 
-input[type="radio"]:checked + label:before, 
-input[type="radio"]:not(:checked) + label:before {
+.radio-button_input:checked + .radio-button_label:before, 
+.radio-button_input:not(:checked) + .radio-button_label:before {
     content: "";
     position: absolute;
     left: 0px;
@@ -39,19 +36,19 @@ input[type="radio"]:not(:checked) + label:before {
     background-color: #ffffff;
 }
 
-input[type="radio"]:checked + label:before, 
-input[type="radio"]:not(:checked) + label:before {
+.radio-button_input:checked + .radio-button_label:before, 
+.radio-button_input:not(:checked) + .radio-button_label:before {
     border-radius: 100%;
 }
 
-input[type="radio"]:checked + label:after, 
-input[type="radio"]:not(:checked) + label:after {
+.radio-button_input:checked + .radio-button_label:after, 
+.radio-button_input:not(:checked) + .radio-button_label:after {
     content: "";
     position: absolute;
 }
 
-input[type="radio"]:checked + label:after, 
-input[type="radio"]:not(:checked) + label:after {
+.radio-button_input:checked + .radio-button_label:after, 
+.radio-button_input:not(:checked) + .radio-button_label:after {
     left: 5px;
     top: 5px;
     width: 12px;
@@ -60,11 +57,10 @@ input[type="radio"]:not(:checked) + label:after {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
  
-input[type="radio"]:not(:checked) + label:after {
+.radio-button_input:not(:checked) + .radio-button_label:after {
     opacity: 0;
 }
 
-input[type="radio"]:checked + label:after {
+.radio-button_input:checked + .radio-button_label:after {
     opacity: 1;
 }
-
