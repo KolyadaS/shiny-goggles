@@ -1,0 +1,15 @@
+include ../rate-button/rate-button.pug
+
+mixin room-card(roomID)
+    div.room-card(data-room-id=roomID)
+        div.slider-line(class="slider-line-"+roomID)
+        div.slider-dots(class="slider-dots-"+roomID)
+        div.room-card__image_prev(class="room-card__image_prev-"+roomID)
+        div.room-card__image_next(class="room-card__image_next-"+roomID)
+        div.room-card__details
+            div.details__suite.font_h3 № <span class='font_h1'>000</span>
+            div.details__price.font_body <span class="price-and-ruble-sign">0</span> в сутки  
+            div.room-card__details_horizontal-line
+            div.details__rating
+                +rate-button("rating-"+roomID)
+            div.details__feedback.font_body отзывов нет

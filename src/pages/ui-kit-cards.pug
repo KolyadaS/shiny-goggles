@@ -6,6 +6,7 @@ include ../blocks/registration-form/registration-form.pug
 include ../blocks/apartment-detailed-card/apartment-detailed-card.pug
 include ../blocks/login-card/login-card.pug
 include ../blocks/calendar-card/calendar-card.pug
+include ../blocks/room-card/room-card.pug
 
 block style 
     link(href="../../node_modules/air-datepicker/dist/css/datepicker.min.css", rel="stylesheet", type="text/css")
@@ -38,6 +39,15 @@ block main
 
     div.form-element
         +calendar-card
+
+    div.form-element
+        +room-card('0001')
+        div bla-bla
+        +room-card('0002')
+        div bla-bla
+        +room-card('0001')
+        div bla-bla
+        +room-card('0003')
 
 block footer
     div bla

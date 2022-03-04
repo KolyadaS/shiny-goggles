@@ -2,6 +2,7 @@ $main-color100: #1F2041;
 $main-color75: rgba(31, 32, 65, 0.75);
 $main-color50: rgba(31, 32, 65, 0.50);
 $main-color25: rgba(31, 32, 65, 0.25);
+$main-color10: rgba(31, 32, 65, 0.1);
 $main-color5: rgba(31, 32, 65, 0.05);
 
 $color1: #BC9CFF;
@@ -43,6 +44,7 @@ $main-margin: 140px;
 @import '../blocks/apartment-detailed-card/apartment-detailed-card.scss';
 @import '../blocks/login-card/login-card.scss';
 @import '../blocks/calendar-card/calendar-card.scss';
+@import '../blocks/room-card/room-card.scss';
 
 @import '../pages/ui-kit-form-elements.scss';
 
