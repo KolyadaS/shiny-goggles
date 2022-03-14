@@ -12,6 +12,10 @@ module.exports = {
     filename: 'index.js'
   },
 
+  stats: {
+    children: true,
+  },
+
   module: {
     rules: [
       {
@@ -29,30 +33,56 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
-          'css-loader',
-          // Compiles Sass to CSS
-          'sass-loader',
+          {
+            // Creates `style` nodes from JS strings
+            loader: 'style-loader'
+          },
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: ''
+            }
+          },
+          {
+            // Translates CSS into CommonJS
+            loader: 'css-loader'
+          },
+          {
+            // Compiles Sass to CSS
+            loader: 'sass-loader'
+          }          
         ],
       },
 
 
       {
         test: /\.pug$/,
-        loader: 'pug-loader'
+        loader: 'pug3-loader'
+      },
+      // {
+      //   test: /\.(jpe?g|gif|png|svg|woff|ttf|eot|otf)$/,
+      //   use: {
+      //     loader: 'file-loader',
+      //     options: {
+      //       name: './blocks/[folder]/[name].[ext]',
+      //     }
+      //   },
+      // },
+      {
+        test: /\.(jpe?g|gif|png|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: './blocks/images/[name][ext]'
+        }
       },
       {
-        test: /\.(jpe?g|gif|png|svg|woff|ttf|eot|otf)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: './blocks/[folder]/[name].[ext]',
-          }
-        },
+        test: /\.(woff|ttf|eot|otf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: './blocks/fonts/[name][ext]'
+        }
       },
+
 
     ]
   },
