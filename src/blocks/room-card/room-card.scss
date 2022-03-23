@@ -1,24 +1,20 @@
-// @import './../blocks/rate-button/rate-button.scss';
 @import '../rate-button/rate-button.scss';
 
 .room-card {
   width: 270px;
   height: 257px;
-  // background-color: bisque;
-  border: 1px solid springgreen;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px $main-color5;
+  border-radius: 4px;
   overflow: hidden;
 }
 
-// .room-card__image {
-//     height: 151px;
-//     border: 1px solid red;
-// background-image: url(../blocks/images/0001.png);
-
 .slider-line {
-  width: 1080px;
-  // height: 257px;
+  // width: 1080px;
+  width: 270px;
+  height: 152px;
   display: flex;
-  // border: 1px solid salmon;
   position: relative;
   left: 0;
   transition: all ease 1s;
@@ -31,7 +27,6 @@
   left: 0px;
   height: 10px;
   width: 257px;
-  // border: 1px solid maroon;
   z-index: 30;
 }
 
@@ -41,23 +36,18 @@
   background-position-x: 50%;
   height: 9px;
   width: 9px;
-  // border: 1px solid crimson;
-  // left: 247px;
-  // top: 130px;
 }
 
 .room-card__image_prev {
   position: relative;
   left: 0px;
   top: -161px;
-  // background-color: aquamarine;
   background-image: url(../blocks/images/expand_more1.svg);
   z-index: 20;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 42px;
   height: 151px;
-  // border: 1px solid darkcyan;
 }
 
 .room-card__image_next {
@@ -76,11 +66,6 @@
 .room-card__image_prev:hover, .room-card__image_next:hover {
   background-color: $main-color5;
 }
-
-
-
-
-
 
 .room-card__details {
   position: relative;

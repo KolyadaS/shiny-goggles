@@ -6,11 +6,9 @@ console.log("Все комнаты: ");
 console.log(currentRoom);
 
 for (let i=0; i<currentRoom.length; i++) {                     // перебираем полученную коллекцию карточек
-    // console.log(currentRoom[i].getAttribute("data-room-id"));
     let currentRoomID = currentRoom[i].getAttribute("data-room-id");  // считываем ид комнаты
     let dataCardId = String(i);
     currentRoom[i].setAttribute("data-card-id", dataCardId);           // добавляем дополнительный атрибут для идентификации карточки
-    console.log(currentRoomID);
     let elemChildren = currentRoom[i].children;                // получаем все дочерние элементы карточки
     for (let k=0; k < elemChildren.length; k++) {                          // перебираем дочерние элементы
         if (elemChildren[k].classList.contains('slider-line')) {                    // если этот элемент имеет указанный класс     
@@ -19,22 +17,26 @@ for (let i=0; i<currentRoom.length; i++) {                     // перебир
             for (let j=0; j < hotelRooms.length; j++) {
                 if (hotelRooms[j]["id"] == currentRoomID) {
                     let imageArr = hotelRooms[j]["picture"];
-                    imageArr.forEach(element => {                          // для каждого элемента в массиве picture создать img
-                        let imgElem = document.createElement('img');
-                        imgElem.src = String(element);
-                        imgElem.alt = "apartment " + String(currentRoomID);
-                        elemChildren[k].append(imgElem);
-                        
-                    });
+                    if (imageArr.length > 0) {
+                        imageArr.forEach(element => {                          // для каждого элемента в массиве picture создать img
+                            let imgElem = document.createElement('img');
+                            imgElem.src = String(element);
+                            imgElem.alt = "apartment " + String(currentRoomID);
+                            imgElem.style.width = "270px";
+                            elemChildren[k].append(imgElem); 
+                        });
+                    }
+                    else {
+                        let noImgElem = document.createElement('img');
+                        noImgElem.src = "../blocks/images/no-image-icon.png";
+                        noImgElem.alt = "Изображение отсутствует";
+                        noImgElem.style.marginLeft = "35px";
+                        noImgElem.style.marginTop = "auto";
+                        elemChildren[k].append(noImgElem);
+                    }
+
                     drawSlider(currentRoom[i]);
-
-
-
-
-                    // start here
-                    // addRoomDetails(hotelRooms[j]);
-                
-                                        
+                  
                     let roomSuite;
                     roomSuite = currentRoom[i].querySelector('.room-card__details');
                     roomSuite.classList.add("room-card__details-" + dataCardId);
@@ -45,34 +47,15 @@ for (let i=0; i<currentRoom.length; i++) {                     // перебир
                     
                     roomSuite.querySelector('.price-and-ruble-sign').innerHTML = String(hotelRooms[j]["price"]);
 
-
-                    console.log('=============');
                     let roomSuiteRating;
                     roomSuiteRating = roomSuite.querySelector(".details__rating");
-                    // roomSuiteRating.contentEditable = "false";
-                    console.log(roomSuiteRating);
-                    // roomSuiteRating.classList.add("details__rating-" + dataCardId);
                     let fieldsetClassList = roomSuiteRating.getElementsByTagName("fieldset")[0].classList[1];
-                    console.log(roomSuiteRating.getElementsByTagName("fieldset")[0].classList[1]);
                     let inputId = roomSuiteRating.getElementsByTagName("fieldset")[0].classList[1] + "_value_" + String(hotelRooms[j]["rating"]);
-                    console.log(inputId);
-                    console.log(document.getElementById(inputId));
                     document.getElementById(inputId).checked = "true";
                     roomSuiteRating.contentEditable = "false";
-                    // let labelIndex = 5 - hotelRooms[j]["rating"];
-                    // console.log(roomSuiteRating.getElementsByClassName("rate-button__fieldset_label")[labelIndex]);
-                    
-
-                    // console.log("input#rating-" + String(hotelRooms[j]["id"]) + "_value_" + String(hotelRooms[j]["rating"]));
-                    // roomSuiteRating.querySelector("input#rating-" + String(hotelRooms[j]["id"]) + "_value_" + String(hotelRooms[j]["rating"])).checked = true;
-
-
                     
                     roomSuite.querySelector('.details__feedback').innerHTML = "<span weight='bold'>" + String(hotelRooms[j]["feedback"]) + "</span> отзывов";
                     
-
-
-                    // end here
                 }
             }
         }
@@ -82,17 +65,9 @@ for (let i=0; i<currentRoom.length; i++) {                     // перебир
 
 
 function drawSlider(roomObject) {
-    // console.log('i am drawing slider for: ' + roomID);
-    // console.log(roomObject.children);
     let offset = 0;
-
     const sliderLine = roomObject.querySelector('.slider-line');
-    // console.log(sliderLine);
-
     let imgCount = sliderLine.children.length;
-    console.log("Количество изображений в этом слайдере: " + String(imgCount));
-
-
 
     let dotFilled;
     createImageDots(imgCount);
@@ -157,7 +132,7 @@ function drawSlider(roomObject) {
 
                 // изменение положения закрашенной точки
         let dotFilledX = dotFilled.style.left.slice(0, dotFilled.style.left.length-2);
-        if (dotFilledX > 205) {
+        if (dotFilledX > 270-15-8-14*(imgCount-1)) {                        // > 205
             dotFilled.style.left = String(Number(dotFilledX) - 14) + "px";
         }
         else {
@@ -166,91 +141,3 @@ function drawSlider(roomObject) {
     })
 
 }
-
-
-
-
-// console.log('читаю из hotelRooms');
-// console.log(hotelRooms);
-
-
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////
-
-// let offset = 0;
-// const sliderLine = document.querySelector('.slider-line');
-
-// let imageCount = document.getElementsByTagName('img').length;
-// // console.log(imageCount);
-
-// let dotFilled;
-
-// function createImageDots(imgCount) {
-//     let left0 = 247;
-//     let left1;
-//     let top0 = 0;
-//     let top1;
-//     let dotEmpty;
-
-//     for (var i = 1; i <= imgCount; i++) {
-//         left1 = left0;
-//         top1 = top0;
-//         dotEmpty = document.createElement('div');
-//         dotEmpty.className = "dot dot"+i;
-//         dotEmpty.style.left = left1 + "px";
-//         dotEmpty.style.top = top1 + "px";
-//         document.querySelector('.slider-dots').append(dotEmpty);
-//         left0 -= 14;
-//         top0 -= 9;
-//     }
-
-//     dotFilled = document.createElement('div');
-//     dotFilled.className = "dot dot0";
-//     dotFilled.style.left = left1 + "px";
-//     top1 -= 9;
-//     dotFilled.style.top = top1 + "px";
-//     dotFilled.style.backgroundImage = "url(../blocks/images/ellipse_filled.svg)";
-//     dotFilled.style.zIndex = "40";
-//     document.querySelector('.slider-dots').append(dotFilled);
-// }
-
-// createImageDots(imageCount);
-
-// document.querySelector('.room-card__image_next').addEventListener('click', function(){
-//     offset += 270;
-//     if (offset > 810) {
-//         offset = 0;
-//     }
-//     sliderLine.style.left = -1 * offset + 'px';
-
-//     // изменение положения закрашенной точки
-//     let dotFilledX = dotFilled.style.left.slice(0, dotFilled.style.left.length-2);
-//     if (dotFilledX < 247) {
-//         dotFilled.style.left = String(Number(dotFilledX) + 14) + "px";
-//     }
-//     else {
-//         dotFilled.style.left = "205px";
-//     }    
-// });
-
-// document.querySelector('.room-card__image_prev').addEventListener('click', function(){
-//     offset -= 270;
-//     if (offset < 0) {
-//         offset = 810;
-//     }
-//     sliderLine.style.left = -1 *offset + 'px';
-
-//     // изменение положения закрашенной точки
-//     let dotFilledX = dotFilled.style.left.slice(0, dotFilled.style.left.length-2);
-//     if (dotFilledX > 205) {
-//         dotFilled.style.left = String(Number(dotFilledX) - 14) + "px";
-//     }
-//     else {
-//         dotFilled.style.left = "247px";
-//     }
-// });

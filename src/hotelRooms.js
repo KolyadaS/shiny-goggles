@@ -23,6 +23,27 @@ room = {
 }
 hotelRooms.push(room);
 
+room = {
+    id: "0003",
+    suite: 111,
+    luxury: false,
+    price: 1111,
+    rating: 1,
+    feedback: 11,
+    picture: ['../blocks/images/0003_3.png', '../blocks/images/0003_1.jpeg', '../blocks/images/0003_2.png']
+}
+hotelRooms.push(room);
+
+room = {
+    id: "0004",
+    suite: 555,
+    luxury: false,
+    price: 555,
+    rating: 5,
+    feedback: 55,
+    picture: []
+}
+hotelRooms.push(room);
 
 // console.log("хотелрумный js = " + hotelRooms);
 // console.log(JSON.stringify(hotelRooms, null, '  '));
