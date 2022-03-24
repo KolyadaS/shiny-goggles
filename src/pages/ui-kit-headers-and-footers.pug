@@ -1,6 +1,8 @@
 extends ../templates/page_template.pug
 
 include ../blocks/logo/logo.pug
+//- include ../blocks/page.header/header.pug
+//- include ../blocks/page.footer/footer.pug
 
 //- block style 
 //-     link(rel="stylesheet", href="../style.scss")
@@ -18,7 +20,7 @@ block header
 
 
 block main
-    div blabla
+    include ../blocks/page-header/page-header.pug
 
 block footer
-    div bla
+    include ../blocks/page-footer/page-footer.pug

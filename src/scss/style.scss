@@ -13,10 +13,10 @@ $main-margin: 140px;
 
 @import '../blocks/fonts/fonts.scss';
 @import '../blocks/logo/logo.scss';
-@import '../blocks/page.header/header.scss';
+@import '../blocks/page-header/page-header.scss';
 @import '../blocks/button-colored/button-colored.scss';
 @import '../blocks/button-framed/button-framed.scss';
-@import '../blocks/page.main/main.scss';
+@import '../blocks/page-main/page-main.scss';
 @import '../blocks/dropdown/dropdown.scss';
 @import '../blocks/expandable-checkbox-list/expandable-checkbox-list.scss';
 @import '../blocks/date-dropdown/date-dropdown.scss';
@@ -24,7 +24,7 @@ $main-margin: 140px;
 @import '../blocks/masked-text-field/masked-text-field.scss';
 @import '../blocks/search-form/search-form.scss';
 @import '../blocks/subscription-text-field/subscription-text-field.scss';
-@import '../blocks/page.footer/footer.scss';
+@import '../blocks/page-footer/page-footer.scss';
 @import '../blocks/text-field/text-field.scss';
 @import '../blocks/icon-text-list/icon-text-list.scss';
 @import '../blocks/checkbox-buttons/checkbox-buttons.scss';
@@ -46,7 +46,7 @@ $main-margin: 140px;
 @import '../blocks/calendar-card/calendar-card.scss';
 @import '../blocks/room-card/room-card.scss';
 
-@import '../pages/ui-kit-form-elements.scss';
+@import '../scss/ui-kit-form-elements.scss';
 
 @import '../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 
@@ -57,4 +57,5 @@ $main-margin: 140px;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "main" "footer";
     grid-gap: 0px;
+    background-color: #F4F4F6;
 }
