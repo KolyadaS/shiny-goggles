@@ -1,5 +1,4 @@
 .header {
-    // grid-area: header;
     display: flex;
     flex-direction: row;
     min-width: 320px;
@@ -13,7 +12,6 @@
 }
 
 .header__logo {
-    border: 1px solid red;
     width: 105px;
     height: 40px;
 }
@@ -23,9 +21,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    // flex-direction: row;
-    // display: inline-flex;
-    // min-width: 100px;
 }
 
 .menu-item {
@@ -40,11 +35,10 @@
 
 .menu-item:hover > .submenu {
     display: block;
-    background-color: rgba(255,255,255,0.5);
+    background-color: white;
     box-shadow: 0px 10px 20px $main-color5;
     border-radius: 4px;
 }
-
 
 .submenu {
     width: max-content;
@@ -52,38 +46,17 @@
     padding: 0px 5px 0px 5px;
     display: none;
     position: absolute;
+    z-index: 100;
 }
 
-
-
-
-@media (max-width: 1000px) {
-    // .header {
-    //     flex-wrap: wrap;
-    // }
+@media (max-width: 550px) {
+    .header {
+        flex-direction: column;
+        padding: 0px;
+    }
 
     .header__menu {
-        // flex-wrap: wrap;
         flex-direction: column;
     }
 
-    // .header__logo,
-    // .header__menu,
-    // .header__buttons {
-    //     margin: 5px 0px 5px 0px;
-    // }
 }
-
-// @media (max-width: 550px) {
-//     .header__menu,
-//     .header__buttons {
-//         flex-direction: column;
-//         flex-wrap: wrap;
-//         align-self: flex-start;
-//     }
-
-//     .login-button,
-//     .signup-button {
-//         margin-bottom: 20px;
-//     }
-// }
