@@ -9,6 +9,7 @@ $color1: #BC9CFF;
 $color2: #8BA4F9;
 
 $page-width: 1440px;
+$page-width-mobile: 768px;
 $main-margin: 140px;
 
 @import '../blocks/fonts/fonts.scss';
@@ -39,6 +40,7 @@ $main-margin: 140px;
 @import '../blocks/button-link/button-link.scss';
 @import '../blocks/button-colored-long/button-colored-long.scss';
 @import '../blocks/page-copyright-bar/page-copyright-bar.scss';
+@import '../blocks/page-footer-mobile/page-footer-mobile.scss';
 // @import '../blocks/pagination/pagination.scss';
 @import '../blocks/range-slider/range-slider.scss';
 @import '../blocks/registration-form/registration-form.scss';
