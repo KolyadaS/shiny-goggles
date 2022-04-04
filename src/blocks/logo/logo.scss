@@ -1,16 +1,9 @@
 .logo {
     width: 105.69px;
-}
-
-.icon {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.brand {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 11.5px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .svg-object {
