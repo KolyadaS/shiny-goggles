@@ -1,30 +1,42 @@
 .content {
-    grid-area: main;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    max-width: $page-width;
-    height: 830px;
-    background-image: url(../blocks/images/main1_background.jpg);
-    background-repeat: no-repeat;
+    justify-content: space-between;
+    width: $page-width - 2 * $main-margin;
+    height: 742px;
+    padding: 70px $main-margin 18px $main-margin;
 }
+
+.content__background {
+    z-index: -1;
+    position: absolute;
+    width: 1534px;
+    height: 1022px;
+    top: -131px;
+    left: -47px;
+    background: url(../blocks/images/image_3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 
 .content__text {
-    display: inline-block;
     align-self: flex-end;
+    height: fit-content;
     text-align: right;
-    margin-bottom: 18px;
-    margin-right: $main-margin;
 }
 
-@media (max-width: 850px) {
-    .content__search-form {
-        margin-left: 10px;
+@media (max-width: $page-width) {
+    .content {
+        width: 100%;
     }
+}
 
-    .content__text {
-        align-self: flex-end;
-        margin-left: 10px;
+@media (max-width: $page-width-mobile) {
+    .content {
+        justify-content: center;
     }
-
 }
