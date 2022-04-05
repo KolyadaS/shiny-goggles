@@ -54,11 +54,12 @@ $main-margin: 140px;
 @import '../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 
 @import './air-datepicker-custom-style.scss';
+@import './ui-kit-headers-and-footers.scss';
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "main" "footer";
-    grid-gap: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: #F4F4F6;
 }
