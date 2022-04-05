@@ -12,8 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: $main-margin;
-    margin-right: $main-margin;
+    margin: 15px $main-margin 15px $main-margin;
 }
 
 .header__logo {
@@ -73,7 +72,7 @@
 @media (max-width: $page-width-mobile) {
     .header_logo-menu {
         flex-direction: column;
-        margin: 0px;
+        margin: 15px 0 15px 0;
     }
 
     .header__menu {
