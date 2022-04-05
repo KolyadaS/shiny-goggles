@@ -35,11 +35,11 @@ mixin page-header(authMark)
                             +new-link('./pages/ui-kit-cards.html', 'XXX', 'Cards')
                         div.submenu-item 
                             +new-link('./pages/ui-kit-headers-and-footers.html', 'XXX', 'Headers & Footers')
-                if authMark == 'no'
+                if authMark == false || authMark == undefined
                     div.menu-item
                         +button-framed('login-button font_h3', './index.html','Войти')
                     div.menu-item
                         +button-colored('signup-button font_h3', './index.html','Зарегистрироваться')
-                else
+                else 
                     div.menu-item.rectangle-divider
                     div.menu-item=authMark

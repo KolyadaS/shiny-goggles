@@ -1,7 +1,7 @@
 extends ../templates/page_template.pug
 
 include ../blocks/logo/logo.pug
-//- include ../blocks/page.header/header.pug
+include ../blocks/page-header/page-header.pug
 //- include ../blocks/page.footer/footer.pug
 
 //- block style 
@@ -16,11 +16,19 @@ block title
 block header
     div.header__logo
         a(href="../index.html")
-            +logo('../blocks/images/icon.svg', '../blocks/images/toxin.svg')
+            //- +logo('../blocks/images/icon.svg', '../blocks/images/toxin.svg')
+            +logo('../blocks/images/icon.svg')
 
 
 block main
-    include ../blocks/page-header/page-header.pug
+    +page-header(false)
+    div.divider
+    +page-header('Юлий Цезарь')
+    div.divider
+    +page-header
+    div.divider
 
 block footer
     include ../blocks/page-footer/page-footer.pug
+    div.divider
+    include ../blocks/page-footer-mobile/page-footer-mobile.pug
