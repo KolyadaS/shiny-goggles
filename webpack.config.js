@@ -133,6 +133,12 @@ module.exports = {
       scriptLoading: 'defer',
     }),
 
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/pages/page-search-room.pug',
+      filename: './pages/page-search-room.html',
+      scriptLoading: 'defer',
+    }),
 
     // new WebpackMd5Hash()
   ]
