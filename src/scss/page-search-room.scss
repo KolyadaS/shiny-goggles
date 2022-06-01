@@ -1,0 +1,30 @@
+.search-room-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: $page-width - 2*$main-margin;
+    padding: 0px $main-margin 0px $main-margin;
+    background-color: white;
+    border: 1px solid salmon;
+    border-bottom: 1px solid $main-color25;
+}
+
+.search-panel {
+    width: 270px;                                 // 326
+    border: 1px solid red;
+}
+
+.rooms-wrapper {
+    width: 834px;
+    // margin: 0 $main-margin 0 $main-margin;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid green;
+}
+
+.room{
+    margin-bottom: 20px;
+}
