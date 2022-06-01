@@ -1,17 +1,18 @@
-$main-color100: #1F2041;
-$main-color75: rgba(31, 32, 65, 0.75);
-$main-color50: rgba(31, 32, 65, 0.50);
-$main-color25: rgba(31, 32, 65, 0.25);
-$main-color10: rgba(31, 32, 65, 0.1);
-$main-color5: rgba(31, 32, 65, 0.05);
+// $main-color100: #1F2041;
+// $main-color75: rgba(31, 32, 65, 0.75);
+// $main-color50: rgba(31, 32, 65, 0.50);
+// $main-color25: rgba(31, 32, 65, 0.25);
+// $main-color10: rgba(31, 32, 65, 0.1);
+// $main-color5: rgba(31, 32, 65, 0.05);
 
-$color1: #BC9CFF;
-$color2: #8BA4F9;
+// $color1: #BC9CFF;
+// $color2: #8BA4F9;
 
-$page-width: 1440px;
-$page-width-mobile: 768px;
-$main-margin: 140px;
+// $page-width: 1440px;
+// $page-width-mobile: 768px;
+// $main-margin: 140px;
 
+@import './variables.scss';
 @import '../blocks/fonts/fonts.scss';
 @import '../blocks/logo/logo.scss';
 @import '../blocks/page-header/page-header.scss';
@@ -50,6 +51,7 @@ $main-margin: 140px;
 @import '../blocks/room-card/room-card.scss';
 
 @import '../scss/ui-kit-form-elements.scss';
+@import '../scss/page-search-room.scss';
 
 @import '../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 
