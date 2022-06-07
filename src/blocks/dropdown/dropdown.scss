@@ -1,5 +1,6 @@
 .dropdown {
-  width: 320px;
+  max-width: 320px;
+  width: inherit;
 }
 
 .dropdown__label-wrapper {
@@ -25,14 +26,17 @@
   align-items: center;
   height: 44px;
   padding-left: 15px;
-  background: url(../blocks/images/expand_more.svg) no-repeat 295px center;
+  background: url(../blocks/images/expand_more.svg) no-repeat 95% center;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border: 1px solid $main-color25;
+  background-color: white;
 }
 
 .dropdown__submenu_wrapper {
   display: none;
+  max-width: 320px;
+  width: inherit;
 }
 
 .dropdown__submenu {
@@ -45,7 +49,8 @@
   border-bottom-right-radius: 4px;
   border: 1px solid $main-color25;
   border-top-width: 0;
-  width: 318px;
+  width: inherit;
+  max-width: 318px;
   padding-top: 7px;
   z-index: 10;
 }

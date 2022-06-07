@@ -1,55 +1,64 @@
-var dropdownBtns = Array.from(document.getElementsByTagName('button'));   // преобразование HTMLCollection в массив
-var allGuestsCount = 0;
-
-function correctVisibility(button) {             // спрятать или показать кнопку очистить
-    if (allGuestsCount == 0) {                         // в зависимости от общего количества гостей
-        button.style.visibility = "hidden";
-    }
-    else { button.style.visibility = "visible"; }
+let dropdownCollection = document.getElementsByClassName('dropdown');
+for (let entry of dropdownCollection) {
+    dropdownManager(entry);
 }
 
-correctVisibility(document.querySelector('.dropdown__button_clear'));   // спрятать кнопку очистить
+function dropdownManager(dropdown) {
+    let allGuestsCount = 0;
+    const clearButton = dropdown.querySelector('.dropdown__button_clear');
+    const applyButton = dropdown.querySelector('.dropdown__button_apply');
+    let dropdownBtnsCollection = dropdown.getElementsByTagName('button'); 
 
+    function checkClearBtnVisibility(button) {
+        if (allGuestsCount === 0) {
+            button.style.visibility = "hidden";
+        }
+        else { button.style.visibility = "visible"; }
+    }
 
-dropdownBtns.forEach((element) => {                            // для каждого элемента массива
-    element.addEventListener('click', function (event) {       // добавить слушатель события "клик" со следующей функцией
-        let index = event.target.classList.value.substr(-1);     // индекс из имени класса нажатой кнопки
-        let guestCount = Number(document.querySelector('.guest-content-' + index).innerHTML);   // текущее количество гостей
-        if (event.target.classList.contains('button_minus')) {           // если нажата кнопка "минус"
-            if (Number(document.querySelector('.guest-content-' + index).innerHTML) > 0) {
-                guestCount += -1;
-                allGuestsCount += -1;                                           // уменьшить количество гостей
-                document.querySelector('.guest-content-' + index).innerHTML = String(guestCount);
-                correctVisibility(document.querySelector('.dropdown__button_clear'));   // проверить, не надо ли спрятать кнопку очистить
+    checkClearBtnVisibility(clearButton);
+
+    for (let button of dropdownBtnsCollection) {
+        button.addEventListener('click', function (event) {       // добавить слушатель события "клик" со следующей функцией
+            let indexOfPressedBtn = event.target.classList.value.substr(-1);     // индекс из имени класса нажатой кнопки
+            let guestCountLabel = dropdown.querySelector('.guest-content-' + indexOfPressedBtn);
+            let currentGuestsCount = Number(guestCountLabel.innerHTML);   // текущее количество гостей
+
+            function changeGuestCount (amountOfChange) {
+                currentGuestsCount += amountOfChange;
+                allGuestsCount += amountOfChange;
+                guestCountLabel.innerHTML = String(currentGuestsCount);
+                checkClearBtnVisibility(clearButton);
             }
-        }
-        else if (event.target.classList.contains('button_plus')) {   // если нажата кнопка "плюс"
-            guestCount += 1;
-            allGuestsCount += 1;                                        // увеличить количество гостей
-            document.querySelector('.guest-content-' + index).innerHTML = String(guestCount);
-            correctVisibility(document.querySelector('.dropdown__button_clear'));   // показать кнопку очистить
-        }
-    });
-});
 
-document.querySelector('.dropdown__button_clear').onclick = function () {  // кнопка очистить
-    for (let index = 0; index < (dropdownBtns.length / 2); index++) {     // сбросить значения в 0
-        document.querySelector('.guest-content-' + index).innerHTML = '0';
+            if ((event.target.classList.contains('button_minus')) && (Number(guestCountLabel.innerHTML) > 0)) {
+                changeGuestCount(-1);
+            } else if (event.target.classList.contains('button_plus')) {
+                changeGuestCount(1);
+            }
+        });
+    };
+
+    clearButton.onclick = function () {
+        for (let indexOfGuestCountLabel = 0; indexOfGuestCountLabel < (dropdownBtnsCollection.length / 2); indexOfGuestCountLabel++) {
+            dropdown.querySelector('.guest-content-' + indexOfGuestCountLabel).innerHTML = '0';
+        }
+        allGuestsCount = 0;
+        dropdown.querySelector('.dropdown__menu').innerHTML = 'Сколько гостей';
+        checkClearBtnVisibility(clearButton);
     }
-    allGuestsCount = 0;
-    document.querySelector('.dropdown__menu').innerHTML = 'Сколько гостей';    // сбросить подпись с общим количеством гостей
-    correctVisibility(document.querySelector('.dropdown__button_clear'));  // спрятать кнопку очистить
-}
 
-function wordInflexion(num, wordForms) {        // окончание слова "гость" в зависимости от общего количества гостей
-    num = Math.abs(num);
-    var num1 = num % 10;
-    if (num > 10 && num < 20) { return wordForms[2]; }
-    if (num1 == 1) { return wordForms[0]; }
-    if (num1 > 1 && num1 < 5) { return wordForms[1]; }
-    return wordForms[2];
-}
+    function wordInflexion(num, wordForms) {        // окончание слова "гость" в зависимости от общего количества гостей
+        num = Math.abs(num);
+        var num1 = num % 10;
+        if (num > 10 && num < 20) { return wordForms[2]; }
+        if (num1 == 1) { return wordForms[0]; }
+        if (num1 > 1 && num1 < 5) { return wordForms[1]; }
+        return wordForms[2];
+    }
 
-document.querySelector('.dropdown__button_apply').onclick = function () {  // кнопка применить
-    document.querySelector('.dropdown__menu').innerHTML = allGuestsCount + " " + wordInflexion(allGuestsCount, ['гость', 'гостя', 'гостей']);
+    applyButton.onclick = function () {
+        dropdown.querySelector('.dropdown__menu').innerHTML = allGuestsCount + " " + wordInflexion(allGuestsCount, ['гость', 'гостя', 'гостей']);
+    }
+
 }
