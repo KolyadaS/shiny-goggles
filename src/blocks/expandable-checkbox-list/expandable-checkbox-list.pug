@@ -1,10 +1,10 @@
 mixin expandable-checkbox-list(label, ...items)
-    div.expandable-checkbox-list 
-        div.expandable-checkbox-list__items.font_body.second-block
+    div.expandable-checkbox-list__wrapper 
+        div.expandable-checkbox-list__list.font_body.second-block
             -var i=1
             each item in items
-                input(type="checkbox" class="checkbox" id="checkbox"+i)
-                label(for="checkbox"+i)= item
+                input(type="checkbox" class="expandable-checkbox-list__item" id="expandable-checkbox-list__item"+i)
+                label(for="expandable-checkbox-list__item"+i)= item
                 -i=i+1
                 <br>
         div.expandable-checkbox-list__title.font_h3.first-block= label
