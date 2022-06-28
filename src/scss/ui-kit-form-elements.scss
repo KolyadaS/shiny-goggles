@@ -1,36 +1,3 @@
-.main-wrapper {
-    width: 1440px;
-    height: 1853px;
-}
-
-
 .form-element {
     margin-bottom: 20px;
-}
-
-.form-element__like-button {
-    max-width: min-content;
-    display: flex;
-}
-
-.form-element__label {
-    margin-bottom: 16px;
-}
-
-.form-element__like-button > .like-button:first-child {
-    padding-right: 10px;
-}
-
-.form-element__rate-button > .rate-button {
-    display: inline-block;
-    padding-right: 20px;
-}
-
-.form-element__buttons {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.form-element__btn-ex:first-child {
-    margin-right: 20px;
 }

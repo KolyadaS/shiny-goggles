@@ -23,6 +23,7 @@ include ../blocks/button-colored-long/button-colored-long.pug
 //- include ../blocks/pagination/pagination.pug
 include ../blocks/range-slider/range-slider.pug
 //- include ../blocks/search-form/search-form.pug
+include ../blocks/page-header/page-header.pug
 
 block style 
     link(href="../../node_modules/air-datepicker/dist/css/datepicker.min.css", rel="stylesheet", type="text/css")
@@ -34,9 +35,7 @@ block title
   title Form Elements
 
 block header
-    div.header__logo
-        a(href="../index.html")
-            +logo('../blocks/images/icon.svg', '../blocks/images/toxin.svg')
+    +page-header
 
 block main
     div.main-wrapper
