@@ -9,4 +9,4 @@ importAll(require.context('./blocks/images', false, /\.*$/));
 import "./blocks/rate-button/rate-button.js";
 import "./blocks/room-card/room-card.js";
 import "./blocks/dropdown/dropdown.js";
-import "./pages/page-search-room.js";
+import './blocks/page-search-room/page-search-room.js';

@@ -8,7 +8,7 @@ let room = {
     price: 9990,
     rating: 4,
     feedback: 145,
-    picture: ['../blocks/images/0001_1.png', '../blocks/images/0001_2.png', '../blocks/images/0001_3.png', '../blocks/images/0001_4.png'],
+    picture: ['./blocks/images/0001_1.png', './blocks/images/0001_2.png', './blocks/images/0001_3.png', './blocks/images/0001_4.png'],
 }
 hotelRooms.push(room);
 
@@ -19,7 +19,7 @@ room = {
     price: 9900,
     rating: 3,
     feedback: 65,
-    picture: ['../blocks/images/0002_1.png', '../blocks/images/0002_2.png', '../blocks/images/0002_3.png']
+    picture: ['./blocks/images/0002_1.png', './blocks/images/0002_2.png', './blocks/images/0002_3.png']
 }
 hotelRooms.push(room);
 
@@ -30,7 +30,7 @@ room = {
     price: 8500,
     rating: 3,
     feedback: 35,
-    picture: ['../blocks/images/0003_1.png']
+    picture: ['./blocks/images/0003_1.png']
 }
 hotelRooms.push(room);
 
@@ -41,7 +41,7 @@ room = {
     price: 7300,
     rating: 5,
     feedback: 19,
-    picture: ['../blocks/images/0004_1.png']
+    picture: ['./blocks/images/0004_1.png']
 }
 hotelRooms.push(room);
 
@@ -52,7 +52,7 @@ room = {
     price: 6000,
     rating: 4,
     feedback: 44,
-    picture: ['../blocks/images/0005_1.png']
+    picture: ['./blocks/images/0005_1.png']
 }
 hotelRooms.push(room);
 
@@ -63,7 +63,7 @@ room = {
     price: 5800,
     rating: 3,
     feedback: 56,
-    picture: ['../blocks/images/0006_1.png']
+    picture: ['./blocks/images/0006_1.png']
 }
 hotelRooms.push(room);
 
@@ -74,7 +74,7 @@ room = {
     price: 5500,
     rating: 5,
     feedback: 45,
-    picture: ['../blocks/images/0007_1.png']
+    picture: ['./blocks/images/0007_1.png']
 }
 hotelRooms.push(room);
 
@@ -85,7 +85,7 @@ room = {
     price: 5300,
     rating: 4,
     feedback: 39,
-    picture: ['../blocks/images/0008_1.png']
+    picture: ['./blocks/images/0008_1.png']
 }
 hotelRooms.push(room);
 
@@ -96,7 +96,7 @@ room = {
     price: 5000,
     rating: 3,
     feedback: 77,
-    picture: ['../blocks/images/0009_1.png']
+    picture: ['./blocks/images/0009_1.png']
 }
 hotelRooms.push(room);
 
@@ -107,7 +107,7 @@ room = {
     price: 5000,
     rating: 5,
     feedback: 25,
-    picture: ['../blocks/images/0010_1.png']
+    picture: ['./blocks/images/0010_1.png']
 }
 hotelRooms.push(room);
 
@@ -118,7 +118,7 @@ room = {
     price: 5000,
     rating: 3,
     feedback: 15,
-    picture: ['../blocks/images/0011_1.png']
+    picture: ['./blocks/images/0011_1.png']
 }
 hotelRooms.push(room);
 
@@ -129,7 +129,7 @@ room = {
     price: 5000,
     rating: 3,
     feedback: 55,
-    picture: ['../blocks/images/0012_1.png']
+    picture: ['./blocks/images/0012_1.png']
 }
 hotelRooms.push(room);
 

@@ -1,6 +1,7 @@
 extends /templates/page_template.pug
 
 include /blocks/page-header/page-header.pug
+include /blocks/page-search-room/page-search-room.pug
 
 block style
   //- link(rel="stylesheet", href="style.css")
@@ -18,5 +19,6 @@ block header
   +page-header
 block main
   include blocks/page-main/page-main.pug
+  +page-search-room
 block footer
-  include blocks/page-footer/page-footer.pug
+  include blocks/page-footer/page-footer.pug 

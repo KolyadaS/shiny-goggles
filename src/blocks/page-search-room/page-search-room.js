@@ -1,6 +1,6 @@
-import {hotelRooms} from '../hotelRooms.js';
+import {hotelRooms} from '../../hotelRooms.js';
 // import createAllThis from '../blocks/room-card/room-card.js';
-import createRoomMiniCard from '../blocks/room-card/room-card.js';
+import createRoomMiniCard from '../room-card/room-card.js';
 
 console.log('room searching...');
 let roomsCollection = hotelRooms;
