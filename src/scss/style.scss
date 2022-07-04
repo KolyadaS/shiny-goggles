@@ -65,3 +65,13 @@
     align-items: center;
     background-color: #F4F4F6;
 }
+
+.registration-login-container {
+    width: $page-width;
+    height: 699px;
+    background-image: url(../blocks/images/image_4.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}

@@ -15,8 +15,29 @@ import './blocks/page-search-room/page-search-room.js';
 const searchRoomButton = document.getElementsByClassName('search-form__button');
 const homeContainer = document.getElementsByClassName('home-container');
 const searchRoomContainer = document.getElementsByClassName('search-room-container_display');
+const registrationButton = document.getElementsByClassName('registration-button');
+const loginButton = document.getElementsByClassName('login-button');
+const registrationLoginContainer = document.getElementsByClassName('registration-login-container');
+const registrationForm = document.getElementsByClassName('registration-form');
+const loginForm = document.getElementsByClassName('login-card');
 
 searchRoomButton[0].onclick = function (e) {
     searchRoomContainer[0].style.display = "flex";
     homeContainer[0].style.display = "none";
 }  
+
+registrationButton[0].onclick = function (e) {
+  registrationLoginContainer[0].style.display = "flex";
+  registrationForm[0].style.display = "flex";
+  loginForm[0].style.display = "none";
+  homeContainer[0].style.display = "none";
+  searchRoomContainer[0].style.display = "none";
+}
+
+loginButton[0].onclick = function (e) {
+  registrationLoginContainer[0].style.display = "flex";
+  loginForm[0].style.display = "flex";
+  registrationForm[0].style.display = "none";
+  homeContainer[0].style.display = "none";
+  searchRoomContainer[0].style.display = "none";
+}

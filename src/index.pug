@@ -1,6 +1,8 @@
 extends /templates/page_template.pug
 
 include /blocks/page-header/page-header.pug
+include blocks/registration-form/registration-form.pug
+include blocks/login-card/login-card.pug
 include /blocks/page-search-room/page-search-room.pug
 
 block style
@@ -19,6 +21,10 @@ block header
   +page-header
 block main
   include blocks/page-main/page-main.pug
+  div.registration-login-container
+    +registration-form
+    +login-card
   +page-search-room
+
 block footer
   include blocks/page-footer/page-footer.pug 
