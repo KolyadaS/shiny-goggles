@@ -10,6 +10,10 @@
     border-bottom: 1px solid $main-color25;
 }
 
+.search-room-container_display {
+    display: none;
+}
+
 .search-panel {
     width: 270px;                                 // 326
     border: 1px solid red;

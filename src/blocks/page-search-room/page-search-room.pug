@@ -6,7 +6,7 @@ include ../../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../blocks/room-card/room-card.pug 
 
 mixin page-search-room
-    div.search-room-container
+    div.search-room-container.search-room-container_display
         div.search-panel
             +filter-date-dropdown('Даты пребывания в отеле')
             +dropdown('uniqID', 'Гости', '', 'Выберите гостей', 'Взрослые', 'Дети', 'Младенцы')
