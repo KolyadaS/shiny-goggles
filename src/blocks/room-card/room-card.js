@@ -112,24 +112,56 @@ function createRoomMiniCard(roomObj, nodeToAppend) {
 
 
 
-
-
-
-
     nodeToAppend = divElem;
     divElem = createDiv("details__suite font_h3", nodeToAppend);
-    divElem.innerHTML = "№ <span class='font_h1'>000</span>";
+    divElem.innerHTML = "№ <span class='font_h1'>" + String(roomObj['suite']) + "</span>";
     divElem = createDiv("details__price font_body", nodeToAppend);
-    divElem.innerHTML = '<span class="price-and-ruble-sign">0</span> в сутки';
+    divElem.innerHTML = '<span class="price-and-ruble-sign">' + String(roomObj['price']) + '</span> в сутки';
     divElem = createDiv("room-card__details_horizontal-line", nodeToAppend);
     divElem = createDiv("details__rating", nodeToAppend);
 
     // +rate-button("rating-"+roomID)
 
     divElem = createDiv("details__feedback font_body", nodeToAppend);
-    divElem.innerHTML = 'отзывов нет';
+    if (roomObj['feedback'] !== 0) {
+        divElem.innerHTML = wordFlection(roomObj['feedback'], ["отзыв", "отзыва", "отзывов", "отзыва"]);
+    } else {
+        divElem.innerHTML = 'отзывов нет';
+    }
 }
 
+function wordFlection(number, flectionVariationsArray) {
+    let flectionCase = 0;
+    let comparedNumber = 0;
+    let absOfNumber = Math.abs(number);
+    let numberWidth = String(absOfNumber).length;
+    if (numberWidth <= 2) {comparedNumber = absOfNumber} 
+    else {comparedNumber = Number(String(absOfNumber).slice(-2))}
+    
+    if (comparedNumber < 10) {
+        flectionCase = comparedNumber % 10;
+    }
+    if ((comparedNumber >= 10) && (comparedNumber <= 20)) {
+        flectionCase = 5;
+    }
+    if (comparedNumber > 20) {
+        flectionCase = comparedNumber % 10; 
+    }
+    
+    switch(flectionCase) {
+        case 1: return String(number) + " " + flectionVariationsArray[0];
+        case 2:
+        case 3:
+        case 4: return String(number) + " " + flectionVariationsArray[1];
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9: 
+        case 0: return String(number) + " " + flectionVariationsArray[2];
+        default: return String(number) + " " + flectionVariationsArray[3]
+    }
+}
 
 
 
