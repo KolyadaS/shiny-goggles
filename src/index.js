@@ -11,15 +11,14 @@ import "./blocks/room-card/room-card.js";
 import "./blocks/dropdown/dropdown.js";
 import './blocks/page-search-room/page-search-room.js';
 
-
-const searchRoomButton = document.getElementsByClassName('search-form__button');
 const homeContainer = document.getElementsByClassName('home-container');
 const searchRoomContainer = document.getElementsByClassName('search-room-container_display');
-const registrationButton = document.getElementsByClassName('registration-button');
-const loginButton = document.getElementsByClassName('login-button');
+const searchRoomButton = document.getElementsByClassName('search-form__button');
 const registrationLoginContainer = document.getElementsByClassName('registration-login-container');
 const registrationForm = document.getElementsByClassName('registration-form');
 const loginForm = document.getElementsByClassName('login-card');
+const registrationButton = document.getElementsByClassName('registration-button');
+const loginButton = document.getElementsByClassName('login-button');
 
 searchRoomButton[0].onclick = function (e) {
     searchRoomContainer[0].style.display = "flex";
