@@ -15,13 +15,12 @@
 }
 
 .search-panel {
-    width: 270px;                                 // 326
+    width: 270px;
     border: 1px solid red;
 }
 
 .rooms-wrapper {
     width: 834px;
-    // margin: 0 $main-margin 0 $main-margin;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
