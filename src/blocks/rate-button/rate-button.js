@@ -1,35 +1,50 @@
-let rateButtonCollection = document.getElementsByClassName('rate-button');
-console.log(rateButtonCollection);
+export default createRateButton;
 
-let i=0;
-[...rateButtonCollection].forEach(function(element){
-    let newClassName = '';
-    newClassName = element.classList[0] + "_" + String(i);
-    element.classList.add(newClassName);
+function createRateButton(id, rateValue, rateButtonDiv, changeableBoolean) {
+        let newClassName = '';
+        newClassName = rateButtonDiv.classList[0] + "_" + String(id);
+        rateButtonDiv.classList.add(newClassName);
 
-    let newFieldset = document.createElement('fieldset');
-    newFieldset.classList.add("rate-button__fieldset");
-    newClassName = "rate-button__fieldset_" + String(i);
-    newFieldset.classList.add(newClassName);
-    element.append(newFieldset);
+        let newFieldset = document.createElement('fieldset');
+        newFieldset.classList.add("rate-button__fieldset");
+        newClassName = "rate-button__fieldset_" + String(id);       
+        newFieldset.classList.add(newClassName);
 
-    console.log(element.className);
+        rateButtonDiv.append(newFieldset);
 
-    for (let j=5; j>=1; j--) {
-        let newInput = document.createElement('input');
-        newInput.type = "radio";
-        newInput.name = newClassName + "_input";
-        newInput.value = String(j);
-        newInput.classList.add("rate-button__fieldset_input");
-        newInput.setAttribute("id", newClassName + "_value_" + String(j));
-        newFieldset.append(newInput);
+        createFiveStars();
+        function createFiveStars() {
+                let fiveStarsMap = new Map();
+                for (let i=1; i<6; i++) {
+                        let starDiv = document.createElement('div');
+                        starDiv.classList.add("star");
+                        starDiv.classList.add("star-value_" + String(i));
+                        if ( rateValue >= i ) {
+                                starDiv.classList.add("star_checked");
+                        }
+                        newFieldset.append(starDiv);
+                        fiveStarsMap.set(i, starDiv);
 
-        let newLabel = document.createElement('label');
-        newLabel.title = String(j);
-        newLabel.classList.add("rate-button__fieldset_label");
-        newLabel.setAttribute("for", newClassName + "_value_" + String(j));
-        newFieldset.append(newLabel);
-    }
+                        starDiv.onclick = function () {
+                                if (changeableBoolean) {
+                                        if (starDiv.classList.contains("star_checked")) {
+                                                for (let star of fiveStarsMap.values()) {
+                                                                star.classList.remove("star_checked");
+                                                }
+                                                starDiv.classList.remove("star_checked");
+                                        }
+                                        else {
+                                                for (let star of fiveStarsMap.values()) {
+                                                        if (star === starDiv) {
+                                                                starDiv.classList.add("star_checked");
+                                                                break;
+                                                        } else { star.classList.add("star_checked"); }
+                                        }
+                                }
+                        }
+                }
+        }
 
-    i++;
-})
+  
+}
+}

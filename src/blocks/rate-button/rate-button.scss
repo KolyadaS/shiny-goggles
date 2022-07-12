@@ -2,54 +2,20 @@
     position: relative;
     height: 24px;
     display: flex;
-    flex-direction: row-reverse;
     padding: 0;
     border: none;
     margin: 0;
 }
 
-.rate-button__fieldset_input:checked, 
-.rate-button__fieldset_input:not(:checked) 
-{
-    position: absolute;
-    left: -9999px;
-}
-
-.rate-button__fieldset_label {
-    cursor: pointer;
-    width: 0px;
+.star {
+    width: 24px;
     height: 24px;
-    top: 1px;
-    padding: 0 0 0 24px;
+    background-image: url(../blocks/images/star_border.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
 
-.rate-button__fieldset_input:not(:checked) + .rate-button__fieldset_label:before {
-    display: block;
-    position: relative;
-    content: url(../blocks/images/star_border.svg);
-    left: -23px;
-    border-color: transparent; 
-}
-
-.rate-button__fieldset_input:checked ~ .rate-button__fieldset_label::before {
-    display: block;
-    position: relative;
-    border-color: transparent;
-    content: url(../blocks/images/star.svg);
-    left: -23px;
-}
-
-.rate-button__fieldset_input:not(:checked) + .rate-button__fieldset_label:after {
-    position: relative;
-    content: "";
-}
-
-.rate-button__fieldset_input:checked ~ .rate-button__fieldset_label:after {
-    position: relative;
-    content: "";
-}
-
-.rate-button__fieldset_input:checked + .rate-button__fieldset_label, 
-.rate-button__fieldset_input:not(:checked) + .rate-button__fieldset_label {
-    padding-left: 24px;
+.star_checked {
+    background-image: url(../blocks/images/star.svg);
 }

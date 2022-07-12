@@ -1,9 +1,8 @@
-import {hotelRooms} from '../../hotelRooms.js';
 export default createRoomMiniCard;
-
+import createRateButton from '../rate-button/rate-button.js';
 
 function createRoomMiniCard(roomObj, nodeToAppend) {
-        
+
     function createDiv(classes, placeToAppend) {
         let newDiv = document.createElement('div');
         newDiv.className += classes;
@@ -14,7 +13,7 @@ function createRoomMiniCard(roomObj, nodeToAppend) {
     let divElem = createDiv("room-card", nodeToAppend);
     divElem.setAttribute('data-room-id', roomObj['id']);
     let currentRoomObj = divElem;
-    
+
     nodeToAppend = divElem;
     divElem = createDiv("slider-line slider-line-" + roomObj['id'], nodeToAppend);
     createSliderLine(roomObj, divElem);
@@ -23,19 +22,16 @@ function createRoomMiniCard(roomObj, nodeToAppend) {
     divElem = createDiv("room-card__image_prev room-card__image_prev-" + roomObj['id'], nodeToAppend);
     divElem = createDiv("room-card__image_next room-card__image_next-" + roomObj['id'], nodeToAppend);
     divElem = createDiv("room-card__details", nodeToAppend);
-    
-    
-    
     drawSlider(currentRoomObj);
 
     function drawSlider(roomObject) {
         let offset = 0;
         const sliderLine = roomObject.querySelector('.slider-line');
         let imgCount = sliderLine.children.length;
-    
+
         let dotFilled;
         createImageDots(imgCount);
-    
+
         function createImageDots(imageCount) {
             // console.log('Нужно точек: ' + imageCount);
             let left0 = 247;
@@ -43,19 +39,19 @@ function createRoomMiniCard(roomObj, nodeToAppend) {
             let top0 = 0;
             let top1;
             let dotEmpty;
-    
+
             for (var i = 1; i <= imageCount; i++) {
                 left1 = left0;
                 top1 = top0;
                 dotEmpty = document.createElement('div');
-                dotEmpty.className = "dot dot"+i;
+                dotEmpty.className = "dot dot" + i;
                 dotEmpty.style.left = left1 + "px";
                 dotEmpty.style.top = top1 + "px";
                 roomObject.querySelector('.slider-dots').append(dotEmpty);
                 left0 -= 14;
                 top0 -= 9;
             }
-    
+
             dotFilled = document.createElement('div');
             dotFilled.className = "dot dot0";
             dotFilled.style.left = left1 + "px";
@@ -65,45 +61,42 @@ function createRoomMiniCard(roomObj, nodeToAppend) {
             dotFilled.style.zIndex = "40";
             roomObject.querySelector('.slider-dots').append(dotFilled);
         }
-    
-        roomObject.querySelector('.room-card__image_next').addEventListener('click', function(){
+
+        roomObject.querySelector('.room-card__image_next').addEventListener('click', function () {
             offset += 270;
-            if (offset > 270*(imgCount-1)) {
+            if (offset > 270 * (imgCount - 1)) {
                 offset = 0;
             }
             sliderLine.style.left = -1 * offset + 'px';
-    
-                    // изменение положения закрашенной точки
-            let dotFilledX = dotFilled.style.left.slice(0, dotFilled.style.left.length-2);
+
+            // изменение положения закрашенной точки
+            let dotFilledX = dotFilled.style.left.slice(0, dotFilled.style.left.length - 2);
             if (dotFilledX < 247) {
                 dotFilled.style.left = String(Number(dotFilledX) + 14) + "px";
             }
             else {
-                dotFilled.style.left = String(247 - 14*(imgCount-1)) + "px";
-            }   
+                dotFilled.style.left = String(247 - 14 * (imgCount - 1)) + "px";
+            }
         })
-    
-        roomObject.querySelector('.room-card__image_prev').addEventListener('click', function(){
+
+        roomObject.querySelector('.room-card__image_prev').addEventListener('click', function () {
             offset -= 270;
             if (offset < 0) {
-                offset = 270*(imgCount-1);
+                offset = 270 * (imgCount - 1);
             }
-            sliderLine.style.left = -1 *offset + 'px';
-    
-                    // изменение положения закрашенной точки
-            let dotFilledX = dotFilled.style.left.slice(0, dotFilled.style.left.length-2);
-            if (dotFilledX > 270-15-8-14*(imgCount-1)) {                        // > 205
+            sliderLine.style.left = -1 * offset + 'px';
+
+            // изменение положения закрашенной точки
+            let dotFilledX = dotFilled.style.left.slice(0, dotFilled.style.left.length - 2);
+            if (dotFilledX > 270 - 15 - 8 - 14 * (imgCount - 1)) {                        // > 205
                 dotFilled.style.left = String(Number(dotFilledX) - 14) + "px";
             }
             else {
                 dotFilled.style.left = "247px";
             }
         })
-    
+
     }
-
-
-
 
     nodeToAppend = divElem;
     divElem = createDiv("details__suite font_h3", nodeToAppend);
@@ -113,7 +106,9 @@ function createRoomMiniCard(roomObj, nodeToAppend) {
     divElem = createDiv("room-card__details_horizontal-line", nodeToAppend);
     divElem = createDiv("details__rating", nodeToAppend);
 
-    // +rate-button("rating-"+roomID)
+    divElem = createDiv("rate-button rate-button_" + String(roomObj['id']), nodeToAppend);
+    let rateButton = document.getElementsByClassName('rate-button_' + roomObj['id']);
+    createRateButton(roomObj['id'], roomObj['rating'], rateButton[0], false);
 
     divElem = createDiv("details__feedback font_body", nodeToAppend);
     if (roomObj['feedback'] !== 0) {
@@ -128,9 +123,9 @@ function wordFlection(number, flectionVariationsArray) {
     let comparedNumber = 0;
     let absOfNumber = Math.abs(number);
     let numberWidth = String(absOfNumber).length;
-    if (numberWidth <= 2) {comparedNumber = absOfNumber} 
-    else {comparedNumber = Number(String(absOfNumber).slice(-2))}
-    
+    if (numberWidth <= 2) { comparedNumber = absOfNumber }
+    else { comparedNumber = Number(String(absOfNumber).slice(-2)) }
+
     if (comparedNumber < 10) {
         flectionCase = comparedNumber % 10;
     }
@@ -138,10 +133,10 @@ function wordFlection(number, flectionVariationsArray) {
         flectionCase = 5;
     }
     if (comparedNumber > 20) {
-        flectionCase = comparedNumber % 10; 
+        flectionCase = comparedNumber % 10;
     }
-    
-    switch(flectionCase) {
+
+    switch (flectionCase) {
         case 1: return String(number) + " " + flectionVariationsArray[0];
         case 2:
         case 3:
@@ -150,7 +145,7 @@ function wordFlection(number, flectionVariationsArray) {
         case 6:
         case 7:
         case 8:
-        case 9: 
+        case 9:
         case 0: return String(number) + " " + flectionVariationsArray[2];
         default: return String(number) + " " + flectionVariationsArray[3]
     }
@@ -164,7 +159,7 @@ function createSliderLine(roomObj, placeToAppend) {
             imgElem.src = String(element);
             imgElem.alt = "apartment " + String(roomObj['id']);
             imgElem.style.width = "270px";
-            placeToAppend.append(imgElem); 
+            placeToAppend.append(imgElem);
         });
     }
     else {
