@@ -60,21 +60,17 @@ function paginate(parentNode, htmlCollectionForPaginating){
         wrapper.appendChild(nextButton);
 
         nextButton.addEventListener('click', function(){
+            let currentActiveButton = document.querySelector('.pagination__button_active');
+            let newActiveButton = currentActiveButton.nextSibling;
+            
             if (currentPage < Math.ceil(items.length/elementsOnPage)) {
                 currentPage +=1;
+                currentActiveButton.classList.remove('pagination__button_active');
+                newActiveButton.classList.add('pagination__button_active');
                 updatePaginationLabel(currentPage, items, paginationLabel);
-                console.log('new page: ' + currentPage);
             }
         });
-
-        // nextButton.addEventListener('click', function() {
-        //     let currentPage = page+1;
-        //     let currentActiveButton = document.querySelector('.pagination__button_active');
-        //     currentActiveButton.classList.remove('pagination__button_active');
-        //     let newActiveButton = currentActiveButton.nextSibling;
-        //     newActiveButton.classList.add('pagination__button_active');
-        //     updatePaginationLabel(currentPage+1, items, paginationLabel);
-        // });
+        
     }
 
     function paginationButton(page, items) {
