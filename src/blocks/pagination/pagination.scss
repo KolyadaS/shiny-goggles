@@ -5,8 +5,6 @@
     align-items: center;
     width: 241px;
     height: 75px;
-    border: 1px solid red;
-    background-color: lightcyan;
 }
 
 .pagination__buttons {
@@ -14,7 +12,6 @@
     width: inherit;
     display: flex;
     justify-content: space-between;
-    border: 1px solid violet;
 }
 
 .pagination__button {
@@ -26,16 +23,8 @@
     border: none;
     outline: none;
     background: none;
-
     text-align: center;
-    // line-height: 40px;
     display: inline-block;
-
-    // transform-style: preserve-3d;
-}
-
-.pagination__label {
-    border: 1px solid seagreen;
 }
 
 .pagination__button_active {
@@ -59,7 +48,6 @@
     bottom: -2px;
     left: -2px;
     border-radius: 22px;
-    // background: linear-gradient(180deg, #BC9CFF, #8BA4F9);
     transform: translateZ(-1px);
 }
 
