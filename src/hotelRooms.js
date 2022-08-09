@@ -133,13 +133,49 @@ room = {
 }
 hotelRooms.push(room);
 
+room = {
+    id: "0013",
+    suite: 999,
+    luxury: false,
+    price: 5000,
+    rating: 3,
+    feedback: 55,
+    picture: ['./blocks/images/0012_1.png']
+}
+hotelRooms.push(room);
 
+room = {
+    id: "0014",
+    suite: 999,
+    luxury: false,
+    price: 5000,
+    rating: 3,
+    feedback: 55,
+    picture: ['./blocks/images/0012_1.png']
+}
+hotelRooms.push(room);
 
+room = {
+    id: "0015",
+    suite: 999,
+    luxury: false,
+    price: 5000,
+    rating: 3,
+    feedback: 55,
+    picture: ['./blocks/images/0012_1.png']
+}
+hotelRooms.push(room);
 
-
-
-
-
+room = {
+    id: "0016",
+    suite: 999,
+    luxury: false,
+    price: 5000,
+    rating: 3,
+    feedback: 55,
+    picture: ['./blocks/images/0012_1.png']
+}
+hotelRooms.push(room);
 
 
 
