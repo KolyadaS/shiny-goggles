@@ -4,6 +4,7 @@ include ../../blocks/checkbox-buttons/checkbox-buttons.pug
 include ../../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
 include ../../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../blocks/room-card/room-card.pug 
+include ../../blocks/pagination/pagination.pug 
 
 mixin page-search-room
     div.search-room-container.search-room-container_display
@@ -15,4 +16,7 @@ mixin page-search-room
             +rich-checkbox-buttons('rich_checkbox_btn_name', 'Доступность', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера')
             +dropdown('udobstva', 'Удобства номера', '', 'Выберите удобства', 'Спальни', 'Кровати', 'Ванные комнаты')
             +expandable-checkbox-list('Дополнительные удобства', 'Завтрак', 'Письменный стол', 'Стол для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
-        div.rooms-wrapper
+        div.rooms-panel
+            div.rooms-wrapper
+            div.pagination-wrapper
+                +pagination
